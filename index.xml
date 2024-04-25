@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>池塘</title>
+    <link>https://diredocks.github.io/blog/</link>
+    <description>Recent content on 池塘</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 21 Apr 2024 00:24:03 +0800</lastBuildDate>
+    <atom:link href="https://diredocks.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>天杀的校园网</title>
+      <link>https://diredocks.github.io/blog/posts/fucked-up-campus-net/</link>
+      <pubDate>Sun, 21 Apr 2024 00:24:03 +0800</pubDate>
+      <guid>https://diredocks.github.io/blog/posts/fucked-up-campus-net/</guid>
+      <description>我时常因为没法白嫖而无能狂怒。&#xA;好吧，也不是纯白嫖，毕竟一个月还是交了些钱给运营商，那我凭啥就不能给几台设备用？ 于是开始折腾，折腾完了认证程序就开始得寸进尺，想：我能不能不认证就上网，纯白嫖呢？&#xA;很遗憾，基本做不到。我们来看一下市面上常见的技术路线：&#xA;白嫖全家桶 基于 UDP 53 端口的代理 地球人都知道，用于域名查询的 DNS 协议走的是 UDP 流量，所以基本上白嫖途径都是想在这动手脚（还有些邪门的——比方说给学校主机挂马的我就不说了）。有些防火墙（或者管理员）比较脑残，在你没登陆的情况下直接放行所有 53 端口的 UDP 流量，初衷是供你在没登陆的时候能浏览校内服务，但是我们可以直接在公网服务器（或者另一台已联网的校内主机）开个 UDP 代理作为跳板转发咱的流量啊！这样连上跳板服务器的代理，我们就能通过这台服务器上网。&#xA;那要是管理员非常鸡贼的只允许 DNS 查询呢？或者交换机会劫持 DNS 查询到内部服务器呢？这条路就死翘翘了。&#xA;ICMP 隧道 ping 一下任意主机，结果发现能 ping 通？这就不能怪我白嫖了&amp;hellip; ICMP 隧道就是一类将 TCP/UDP 数据包封装进 ICMP 数据包的技术。通过套娃伪装，防火墙只会觉得你在温柔的呼唤网络上的主机，毕竟小小的 ping 还能有什么坏心思呢？&#xA;可惜在你校，这条技术路线也不行————没认证？你 ping 个头呢。&#xA;DNS 隧道 好吧，既然只有 DNS 流量放行，那咱就伪装成 DNS 流量吧。但问题在与：虽然 DNS 回复包理论上大小可以没有上限（在超过大小限制后会自动转为用 TCP 通信），但查询包有大小限制，就只能把要发送的数据包切分拆了发出去，服务器那边接收到之后再合并。何况 UDP 发送接收不稳定，你带得有额外的机制保证包被正确合并。不用想就知道，这么一通折腾下来，连接必然是卡顿的、性能必然是拉胯的————到头咱还不如用流量。&#xA;你专校园网是咋认证的？ 我是小白，纯粹凭感觉写的文章，要严谨（喜欢被 RFC 折磨）请戳 民间 H3C inode 客户端黑历史&#xA;在机群中遇见彼此 首先，需要认证的客户端会向整个网络发送一个广播，说：&#xA;“我要开始认证了，认证服务器是哪位？”&#xA;这个包被称为 EAPoL-Start，在认证服务器接收到包之后，又会对我们说：&#xA;“哈喽是我，你 V 我身份信息证明实力！”</description>
+    </item>
+    <item>
+      <title>试着写一个更好的校园网认证客户端</title>
+      <link>https://diredocks.github.io/blog/posts/attempting-implement-better-campus-net-client/</link>
+      <pubDate>Sun, 21 Apr 2024 00:02:42 +0800</pubDate>
+      <guid>https://diredocks.github.io/blog/posts/attempting-implement-better-campus-net-client/</guid>
+      <description>我一直在用 bitdust 的 njit8021xclient，除了一开始的反编译过程令我痛苦无比，后面的使用非常非常顺畅，基本上没出过什么大岔子。校园网的计费系统和行为管理系统是分开的，所以上学期几次被封也不是认证的锅。&#xA;这个开源的新华三 802.1X 客户端经历了十几年松散的开发，从代码上来看比较丑陋，不过用着没问题，我也就没想着折腾它。而希望能重写一个更好的客户端的念头来源于我最近的 C++ 学习，光看教程十分枯燥，我想着多少写点有用的东西。&#xA;我没有接触过网络编程，对 C/C++ 体系里的各种工具也不是很适应，CMake 咋用、各种库咋调都不是很清楚，更要命的是，我读过前述项目代码之后发现：它已经十分简洁了，虽然丑陋，但代码足够简单和清晰，并且基本上算是零依赖：除了 libpcap 和 openssl。不过这也是让我有点疑惑的点：它既调用了 openssl, 又自己实现了一些相关的功能，大概是十几年间接续开发的历史遗留问题吧。如果我用 C++ 重写，说不定整出来一个性能和体积都不如这个版本的垃圾东西&amp;hellip;&#xA;现在似乎没有多少高校使用新华三的 802.1X 认证了，即使做出来估计也没多少人会用，何况这类客户端绕不开对原版客户端的二进制逆向，使用门槛比较高，唯一能寄希望的就是某一位使用者能把他环境里的字典数据逆向出来，分享给同环境（单位、学校）的人用。&#xA;或许等我学得再深入些，能开发一个自动 crack 原版客户端、提取字典的程序？哈哈。&#xA;我目前的工作集中在理解协议设计上，整理好认证包和认证流程之后，就可以试着熟悉 C++ 生态（构建系统、包管理）了。&#xA;说是学业繁重，其实有时候希望学校少开点课程该多好，因为就算开这么些课也是考试前抱佛脚，平常不学习多少有点惶惶不可终日，但是又不想学习，只想干自己的事情。&#xA;至于自己的事情是啥？估计就是这些破事水和重复造轮子的项目吧。&#xA;ԅ(¯﹃¯ԅ)&#xA;悄悄在这&#xA;卖个萌&#xA;应该&#xA;不会有人&#xA;发现&amp;hellip;</description>
+    </item>
+    <item>
+      <title>我</title>
+      <link>https://diredocks.github.io/blog/about/</link>
+      <pubDate>Tue, 16 Apr 2024 13:30:00 +0800</pubDate>
+      <guid>https://diredocks.github.io/blog/about/</guid>
+      <description>这个博客使用 Hugo 驱动，主题为 nostyleplease&#xA;我喜欢 breakcore 和 indie 音乐，最喜欢的乐队有两支：Radiohead 以及 My Little Airport。&#xA;我的偶像是 manateelazycat 和 Richard Stallman。&#xA;我平常多使用 Python 编程，主力设备运行 NixOS, K 桌面环境。&#xA;我正在 learncpp.com 学习使用 C++ 编程， 在 2024 年的计划是成为 KDE Contributor, 改善 KDE 下的触控板使用体验。&#xA;我时常怀恋从前。&#xA;我会说粤语和普通话，会一点点英语。&#xA;如果你要联系我，请在我的博客仓库留下一条 issue, 可以包含你的联系方式。&#xA;池塘 其实长这么大接触到的池塘都是脏脏的，不过这并不妨碍我幻想一个美好的池塘——甚至最好不是池塘，是湖泊。&#xA;我和我的好朋友们，在一艘小船上，聊天，啥都不用想。池塘的荷叶上有露珠，早上那种蓝色的，雾蒙蒙的，旁边是森林，小溪，平整的森林，淅沥沥的小雨飘在我们身上。&#xA;整个世界都静止了，天啊。&#xA;我们慢慢飘到池塘中心，一切都是这么和谐、自然、美好。&#xA;大学 我就读于一所民办三本院校，坐标福建福州。&#xA;我的大学生活很无聊，没什么朋友，只是偶尔写些代码看看书。&#xA;我参加过一个校内的网络安全俱乐部，打过几场 CTF 比赛，名次一般，不过我玩的还是挺开心的。后期认为自己不适合网络安全，便退出，去做别的事情了。&#xA;我的同学里其实不乏比我厉害很多的人，不过我也不想去比较，毕竟你不能拿鳄鱼去跟鸟比飞行能力，或者拿狮子去和鱼比游泳能力。&#xA;理想 构建一个更自由、更开放的互联网。&#xA;Across the Great Wall we can reach every corner in the world.</description>
+    </item>
+    <item>
+      <title>Another Boring Hello World Post</title>
+      <link>https://diredocks.github.io/blog/posts/hello-world/</link>
+      <pubDate>Tue, 16 Apr 2024 13:05:13 +0800</pubDate>
+      <guid>https://diredocks.github.io/blog/posts/hello-world/</guid>
+      <description>很多事情该说不说，最后烂在肚子里就不想说了，说实话，这么些年下来 我的表达欲慢慢在降低。我说或者不说又有什么用呢？说得太多， 反而容易被识破、戳穿。&#xA;为什么我连自我表达都开始焦虑？&#xA;社交媒体的侵略性太强，在荧屏面前，好像你不得不点赞、转发、评论， 才能显得你在乎某个人。&#xA;我觉得这样挺没劲的。&#xA;讨好自己， 现实逃避。&#xA;不知不觉，&#xA;抽离。&#xA;漫天的是非， 做我的真理。&#xA;一团和气，&#xA;处事道理。&#xA;遮遮掩掩——&#xA;脸皮&#xA;其实都自卑&amp;hellip;&#xA;其实都自欺&amp;hellip;&#xA;我懒得被关注，只想引人注意，所以我还是写写博客吧。</description>
+    </item>
+  </channel>
+</rss>
