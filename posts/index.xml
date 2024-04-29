@@ -6,8 +6,15 @@
     <description>Recent content in Posts on 池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 21 Apr 2024 00:02:42 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 29 Apr 2024 00:24:03 +0800</lastBuildDate>
     <atom:link href="https://diredocks.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 Pixelbook Go 上安装 AOSC 的坑 feat.我的碎碎念</title>
+      <link>https://diredocks.github.io/blog/posts/pixelbook-go-with-aosc/</link>
+      <pubDate>Mon, 29 Apr 2024 00:24:03 +0800</pubDate>
+      <guid>https://diredocks.github.io/blog/posts/pixelbook-go-with-aosc/</guid>
+      <description>这标题好长（）&#xA;安装程序分区卡住 目前安装程序 Deploykit 会在清除磁盘后报错，重启再进安装镜像方可解决这个问题。&#xA;修复声音/键盘映射 参考： WeirdTreeThing/chromebook-linux-audio 和 WeirdTreeThing/cros-keyboard-map AOSC OS 的兼容性还是不错的，跑的脚本没有经过更改，直接依照指导运行就能生效。&#xA;修复 Assistant 键 上面的脚本不能修复谷歌助理键，就是普通笔记本上 Meta 键位置上的按键，查看 dmesg 可以发现是内核不知道该怎么映射这个键，很简单，用 sudo showkey ，按下你需要映射到的键位的同时，你应该就能看到对应的键位值，然后使用 sudo setkeycodes e058 &amp;lt;你需要的键位值&amp;gt; 即可完成映射。&#xA;后记 其实很早之前就听闻 AOSC, 只不过那时我玩 Linux 还不熟练，并不是目标用户。&#xA;现在来看，AOSC 的设计哲学和 Arch Linux 颇有几分相似，贴近上游、不过多给自己添戏的作风与国内一众发行版迥异，其搭载的 oma 包管理界面也确实让 apt/dpkg 的使用变得更加轻松。 唯一的不足体现在 depolykit 暂时还不是很完备，没有多语言支持、报错信息甚至会被挡住，不过这些问题无伤大雅。&#xA;作为一个小众发行版，安同将近十年的连续开发和类似于国外主流发行版的社区氛围，都体现了开发团队的确认真在做一个“有趣”、“好用”的系统。&#xA;希望安同能在龙架构慢慢被爱好者发掘、把玩的时代背景下，发展出一个更有生命力的社区； 另外今年开源之夏似乎有 AOSC 的项目，不过不知道 if thers&amp;rsquo;s anything I can help&amp;hellip;. 七月份有 AOSCC, 很难得在国内能聚集一帮喜欢玩 Linux 的人，或许我们？七月见！</description>
+    </item>
     <item>
       <title>试着写一个更好的校园网认证客户端</title>
       <link>https://diredocks.github.io/blog/posts/attempting-implement-better-campus-net-client/</link>
