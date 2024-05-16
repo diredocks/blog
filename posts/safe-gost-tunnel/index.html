@@ -59,12 +59,15 @@ warp-cli register # 注册 warp-cli set-mode proxy # 设置代理模式 warp-cli
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">addr</span>: :<span style="color:#ae81ff">53</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">handler</span>:
 </span></span><span style="display:flex;"><span>	<span style="color:#f92672">type</span>: <span style="color:#ae81ff">relay</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">auth</span>:
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">username</span>: <span style="color:#ae81ff">&lt;配置用户名称&gt;</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">password</span>: <span style="color:#ae81ff">&lt;配置连接密码&gt;</span>
 </span></span><span style="display:flex;"><span>	<span style="color:#f92672">chain</span>: <span style="color:#ae81ff">chain-0</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">listener</span>:
 </span></span><span style="display:flex;"><span>	<span style="color:#f92672">type</span>: <span style="color:#ae81ff">wss</span>
 </span></span><span style="display:flex;"><span>	<span style="color:#f92672">tls</span>:
 </span></span><span style="display:flex;"><span>		<span style="color:#f92672">certFile</span>: <span style="color:#e6db74">&#34;/etc/letsencrypt/live/&lt;你的网站域名&gt;/fullchain.pem&#34;</span>
-</span></span><span style="display:flex;"><span>		<span style="color:#f92672">keyfile</span>: <span style="color:#e6db74">&#34;/etc/letsencrypt/live/&lt;你的网站域名&gt;/private.pem&#34;</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">keyFile</span>: <span style="color:#e6db74">&#34;/etc/letsencrypt/live/&lt;你的网站域名&gt;/private.pem&#34;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">chains</span>:
 </span></span><span style="display:flex;"><span>- <span style="color:#f92672">name</span>: <span style="color:#ae81ff">chain-0</span>
@@ -77,7 +80,29 @@ warp-cli register # 注册 warp-cli set-mode proxy # 设置代理模式 warp-cli
 </span></span><span style="display:flex;"><span>		<span style="color:#f92672">type</span>: <span style="color:#ae81ff">tcp</span>
 </span></span></code></pre></div><p>把文件保存为 <code>gost.yml</code>，然后在当前目录运行 <code>gost</code>，会自动检索配置文件。</p>
 <h2 id="连接到隧道">连接到隧道</h2>
-<p>客户端运行 <code>gost -L socks5://:2333 -F relay+wss://&lt;你的服务器域名或IP&gt;:53</code> 即可连接，socks 代理地址 <code>127.0.0.1</code>，端口 <code>2333</code>。</p>
+<p>客户端配置如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">services</span>:
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">name</span>: <span style="color:#ae81ff">service-0</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">addr</span>: :<span style="color:#ae81ff">2333</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">handler</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">type</span>: <span style="color:#ae81ff">socks</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">chain</span>: <span style="color:#ae81ff">chain-0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">chains</span>:
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">name</span>: <span style="color:#ae81ff">chain-0</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">hops</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">hop-0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">nodes</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">node-0</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">addr</span>: <span style="color:#ae81ff">&lt;你的服务器域名或ip&gt;:53</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">connector</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">type</span>: <span style="color:#ae81ff">relay</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">auth</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">username</span>: <span style="color:#ae81ff">&lt;配置用户名称&gt;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">password</span>: <span style="color:#ae81ff">&lt;配置连接密码&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">dialer</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">type</span>: <span style="color:#ae81ff">wss</span>
+</span></span></code></pre></div><p>保存为<code>gost.yml</code>，同目录运行 <code>gost</code> 即可连接，socks 代理地址 <code>127.0.0.1</code>，端口 <code>2333</code>。</p>
 
 </article>
 
