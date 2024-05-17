@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="无数人每天仍然在用 root 密码登陆他们的服务器，且不说允许 root 远程登陆是不是个好的习惯，至少咱能不用密码吗？
+在 Linux 下把你的密钥加入远程服务器很简单，使用命令：
+ssh-copy-id &lt;user&gt;@&lt;hostname:port&gt; 登上你的服务器之后，修改 /etc/ssh/sshd_config 文件，找到 PasswordAuthentication yes ，取消对其的注释，然后改成 PasswordAuthentication no。使用 systemctl restart sshd 重启服务即可。">  
+
+  <title>
+    
+      请用密钥登陆 SSH
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/blog/" />
+  
+  
+  
+  <link rel="stylesheet" href="/blog/css/main.2d7a9caa2ca9e946eac324462fc31af6f5c3b970d5239350e674636a977eeb10d8f8fbedcc184e19ac3be27f7b1256f46c65912e7d5613d9694ddc09cd329d70.css" integrity="sha512-LXqcqiyp6UbqwyRGL8Ma9vXDuXDVI5NQ5nRjapd&#43;6xDY&#43;PvtzBhOGaw74n97Elb0bGWRLn1WE9lpTdwJzTKdcA==" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Noto+Sans+SC:wght@100..900&display=swap" rel="stylesheet">
+  
+</head>
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+<a href="/blog/">..</a>
+
+
+<article>
+    <p class="post-meta">
+        <time datetime="2024-05-17 14:31:09 &#43;0800 CST">
+            2024-05-17
+        </time>
+    </p>
+
+    <h1>请用密钥登陆 SSH</h1>
+
+    
+
+    <p>无数人每天仍然在用 root 密码登陆他们的服务器，且不说允许 root 远程登陆是不是个好的习惯，至少咱能不用密码吗？</p>
+<p>在 Linux 下把你的密钥加入远程服务器很简单，使用命令：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-copy-id &lt;user&gt;@&lt;hostname:port&gt;
+</span></span></code></pre></div><p>登上你的服务器之后，修改 <code>/etc/ssh/sshd_config</code> 文件，找到 <code>PasswordAuthentication yes</code> ，取消对其的注释，然后改成 <code>PasswordAuthentication no</code>。使用 <code>systemctl restart sshd</code> 重启服务即可。</p>
+
+</article>
+
+            </div>
+        </main>
+    </body></html>
