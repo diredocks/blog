@@ -6,8 +6,15 @@
     <description>Recent content on 池塘</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Jul 2024 23:58:34 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 06 Aug 2024 23:38:20 +0800</lastBuildDate>
     <atom:link href="https://diredocks.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nand2UnitTest：从与非门到单元测试</title>
+      <link>https://diredocks.github.io/blog/posts/nand2unittest/</link>
+      <pubDate>Tue, 06 Aug 2024 23:38:20 +0800</pubDate>
+      <guid>https://diredocks.github.io/blog/posts/nand2unittest/</guid>
+      <description>我最近在做一个叫做 Nand2Tetris 的课程，主要是关于计算机组成原理的，从与非们出发，最好搭建出一部完整的计算机系统。&#xA;这门课分为两个部分，第一部分侧重硬件，从与非门开始，搭建完整的计算机平台（这门课搭建的平台叫 Hack）；第二部分侧重软件，你需要实现 Hack 汇编器、编译器、标准库、操作系统，最后在这个平台上像个正常人类一样开发应用。&#xA;我刚完成了第一部分，体感不错，应该是因为这部分比较简单（这部分没有深入讲流水、数据总线等内容，我准备到时候看 CS61C 补习）。接下来就是软件部分了，据说很难，但是可能会挺有意思。&#xA;在第一部分的最后，实现 Hack CPU 的时候，我已经基本没什么很通畅的思路了，主要依靠单元测试慢慢摸索出合适的连接和组件。我以前写程序对测试真没啥感觉，直到有位老哥提醒了我，我才慢慢了解还有测试这回事，但当时感受也不怎么深，大概是还没遇到坑吧。&#xA;所以第二部分大概会把单元测试看得很重，不过或许也不应该这样？感觉要变成面向用例编程了（）&#xA;关于测试，其实还有一些很有趣的思路，比方说这里有一位逆向工程师，他利用测试覆盖率探测程序执行路径，总之要踩的坑还很多，很多&amp;hellip;</description>
+    </item>
     <item>
       <title>昭和遗珠：冈本舞子</title>
       <link>https://diredocks.github.io/blog/posts/finding_maiko/</link>

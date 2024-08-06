@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="我最近在做一个叫做 Nand2Tetris 的课程，主要是关于计算机组成原理的，从与非们出发，最好搭建出一部完整的计算机系统。
+这门课分为两个部分，第一部分侧重硬件，从与非门开始，搭建完整的计算机平台（这门课搭建的平台叫 Hack）；第二部分侧重软件，你需要实现 Hack 汇编器、编译器、标准库、操作系统，最后在这个平台上像个正常人类一样开发应用。
+我刚完成了第一部分，体感不错，应该是因为这部分比较简单（这部分没有深入讲流水、数据总线等内容，我准备到时候看 CS61C 补习）。接下来就是软件部分了，据说很难，但是可能会挺有意思。
+在第一部分的最后，实现 Hack CPU 的时候，我已经基本没什么很通畅的思路了，主要依靠单元测试慢慢摸索出合适的连接和组件。我以前写程序对测试真没啥感觉，直到有位老哥提醒了我，我才慢慢了解还有测试这回事，但当时感受也不怎么深，大概是还没遇到坑吧。
+所以第二部分大概会把单元测试看得很重，不过或许也不应该这样？感觉要变成面向用例编程了（）
+关于测试，其实还有一些很有趣的思路，比方说这里有一位逆向工程师，他利用测试覆盖率探测程序执行路径，总之要踩的坑还很多，很多&hellip;">  
+
+  <title>
+    
+      Nand2UnitTest：从与非门到单元测试
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/blog/" />
+  
+  
+  
+  <link rel="stylesheet" href="/blog/css/main.1835acf678793590db3fbeb65bf6810c7f2a59a6e8eb308e6f3d38eb3f0a77bca49d21c7994caf3b31ecefd458bff4c5fcfc5414836ac1ec5b34bde26c7b62cd.css" integrity="sha512-GDWs9nh5NZDbP762W/aBDH8qWabo6zCObz046z8Kd7yknSHHmUyvOzHs79RYv/TF/PxUFINqwexbNL3ibHtizQ==" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Noto+Sans+SC:wght@100..900&display=swap" rel="stylesheet">
+  
+</head>
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+<a href="/blog/">..</a>
+
+
+<article>
+    <p class="post-meta">
+        <time datetime="2024-08-06 23:38:20 &#43;0800 CST">
+            2024-08-06
+        </time>
+    </p>
+
+    <h1>Nand2UnitTest：从与非门到单元测试</h1>
+
+    
+
+    <p>我最近在做一个叫做 <a href="https://www.nand2tetris.org/">Nand2Tetris</a> 的课程，主要是关于计算机组成原理的，从与非们出发，最好搭建出一部完整的计算机系统。</p>
+<p>这门课分为两个部分，第一部分侧重硬件，从与非门开始，搭建完整的计算机平台（这门课搭建的平台叫 Hack）；第二部分侧重软件，你需要实现 Hack 汇编器、编译器、标准库、操作系统，最后在这个平台上<strong>像个正常人类一样开发应用</strong>。</p>
+<p>我刚完成了第一部分，体感不错，应该是因为这部分比较简单（这部分没有深入讲流水、数据总线等内容，我准备到时候看 CS61C 补习）。接下来就是软件部分了，据说很难，但是可能会挺有意思。</p>
+<p>在第一部分的最后，实现 Hack CPU 的时候，我已经基本没什么很通畅的思路了，主要依靠单元测试慢慢摸索出合适的连接和组件。我以前写程序对测试真没啥感觉，直到有位老哥提醒了我，我才慢慢了解还有测试这回事，但当时感受也不怎么深，大概是还没遇到坑吧。</p>
+<p>所以第二部分大概会把单元测试看得很重，不过或许也不应该这样？感觉要变成面向用例编程了（）</p>
+<p>关于测试，其实还有一些很有趣的思路，比方说这里有一位逆向工程师，他<a href="https://linux.do/t/topic/93277/1">利用测试覆盖率探测程序执行路径</a>，总之要踩的坑还很多，很多&hellip;</p>
+
+</article>
+
+            </div>
+        </main>
+    </body></html>

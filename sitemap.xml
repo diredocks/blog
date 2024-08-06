@@ -2,8 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://diredocks.github.io/blog/posts/nand2unittest/</loc>
+    <lastmod>2024-08-06T23:38:20+08:00</lastmod>
+  </url><url>
     <loc>https://diredocks.github.io/blog/posts/</loc>
-    <lastmod>2024-07-28T23:58:34+08:00</lastmod>
+    <lastmod>2024-08-06T23:38:20+08:00</lastmod>
   </url><url>
     <loc>https://diredocks.github.io/blog/posts/finding_maiko/</loc>
     <lastmod>2024-07-28T23:58:34+08:00</lastmod>
