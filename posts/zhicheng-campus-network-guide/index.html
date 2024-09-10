@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="日后你惹出祸来，不把师父说出来就行了
+校园网概况 名义上有三家运营商，但实际出口只有联通和移动两家，2024 年秋季开学以来，电信好像消失了； 所以无论你办哪家的校园网，校园网（有线网络、校园热点）的网络质量都是一样的； 没有 ipv6； 教务处的服务不需要内网，你不买校园网也可以正常选课。 认证客户端：inyn 自由不是你想做什么就能做什么，而是你不想做什么就可以不做什么 —— 伊曼努尔·康德
+你想要在学校上网，对吗？你还想要多台设备同时上网，而不是被限制登陆数量，对吗？ 有时候你并没有在用 Windows, 而是用别的系统，你希望插上网线也能认证，对吗？ 又或者你使用 Windows ，也接受不了一个又大又可疑的认证客户端，对吗？
+inyn 就是为您设计的 : )
+inyn 是一个现代新华三 802.1x 标准认证客户端。它的全称是 “I am Not Your Node”，而新华三官方的认证客户端叫 iNode。
+使用 inyn, 您可以在各种平台上认证校园网。只要配置好账号密码，它会自动认证，并在认证失败时告诉你哪里出错了。
+你可能会觉得，自己编译和配置会不会特别麻烦？没错，它就是这么麻烦，不过它的后继版本 inyn-go 正在由一个校园网害虫精心开发，届时会有更清晰的文档和 Web 配置前端，并支持更多功能（定时断网、失败回调&hellip;）
+inyn 基于 bitdust 的 njit8021xclient 分支开发，njit8021xclient 来自南京工程学院和开源社群，向所有研究协议和实现的大侠们致敬～
+路由器刷机 选择一个可以刷成 OpenWrt 的路由器，红米 ac2100 和 wr30u 都是不错的选择。我自己用的是 ac2100, 不支持 wifi6, 不过价格比较亲民，学校的网速也能跑满。
+我想在这里省略具体的做法，因为这件事的教程在网上很多，你可以自己找。 比方说，这是我参考的刷机教程：红米 AC2100 路由器刷 OpenWrt 教程
+要注意一下，这篇文章的成文时间比较早了，现在最新的稳定版 OpenWrt 是 23.05.4 , 把 URL 里的 21.">  
+
+  <title>
+    
+      至专校园网攻略
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/blog/" />
+  
+  
+  
+  <link rel="stylesheet" href="/blog/css/main.1835acf678793590db3fbeb65bf6810c7f2a59a6e8eb308e6f3d38eb3f0a77bca49d21c7994caf3b31ecefd458bff4c5fcfc5414836ac1ec5b34bde26c7b62cd.css" integrity="sha512-GDWs9nh5NZDbP762W/aBDH8qWabo6zCObz046z8Kd7yknSHHmUyvOzHs79RYv/TF/PxUFINqwexbNL3ibHtizQ==" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Noto+Sans+SC:wght@100..900&display=swap" rel="stylesheet">
+  
+</head>
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+<a href="/blog/">..</a>
+
+
+<article>
+    <p class="post-meta">
+        <time datetime="2024-09-10 20:32:06 &#43;0800 CST">
+            2024-09-10
+        </time>
+    </p>
+
+    <h1>至专校园网攻略</h1>
+
+    
+
+    <p><strong>日后你惹出祸来，不把师父说出来就行了</strong></p>
+<h2 id="校园网概况">校园网概况</h2>
+<ol>
+<li>名义上有三家运营商，但实际出口只有联通和移动两家，2024 年秋季开学以来，电信好像消失了；</li>
+<li>所以无论你办哪家的校园网，校园网（有线网络、校园热点）的网络质量都是一样的；</li>
+<li>没有 ipv6；</li>
+<li>教务处的服务不需要内网，你不买校园网也可以正常选课。</li>
+</ol>
+<h2 id="认证客户端inyn">认证客户端：inyn</h2>
+<blockquote>
+<p>自由不是你想做什么就能做什么，而是你不想做什么就可以不做什么 —— 伊曼努尔·康德</p>
+</blockquote>
+<p>你想要在学校上网，对吗？你还想要多台设备同时上网，而不是被限制登陆数量，对吗？
+有时候你并没有在用 Windows, 而是用别的系统，你希望插上网线也能认证，对吗？
+又或者你使用 Windows ，也接受不了一个又大又可疑的认证客户端，对吗？</p>
+<p><a href="https://github.com/diredocks/inyn">inyn</a> 就是为您设计的 : )</p>
+<p>inyn 是一个现代新华三 802.1x 标准认证客户端。它的全称是 “I am Not Your Node”，而新华三官方的认证客户端叫 iNode。</p>
+<p>使用 inyn, 您可以在各种平台上认证校园网。只要配置好账号密码，它会自动认证，并在认证失败时告诉你哪里出错了。</p>
+<p>你可能会觉得，自己编译和配置会不会特别麻烦？没错，它就是这么麻烦，不过它的后继版本 <a href="https://github.com/diredocks/inyn-go">inyn-go</a> 正在由一个校园网害虫精心开发，届时会有更清晰的文档和 Web 配置前端，并支持更多功能（定时断网、失败回调&hellip;）</p>
+<p>inyn 基于 bitdust 的 njit8021xclient 分支开发，njit8021xclient 来自南京工程学院和开源社群，向所有研究协议和实现的大侠们致敬～</p>
+<h2 id="路由器刷机">路由器刷机</h2>
+<p>选择一个可以刷成 OpenWrt 的路由器，红米 ac2100 和 wr30u 都是不错的选择。我自己用的是 ac2100, 不支持 wifi6, 不过价格比较亲民，学校的网速也能跑满。</p>
+<p>我想在这里省略具体的做法，因为这件事的教程在网上很多，你可以自己找。
+比方说，这是我参考的刷机教程：<a href="https://www.lotlab.org/2021/06/13/install-openwrt-on-redmi-ac2100/">红米 AC2100 路由器刷 OpenWrt 教程</a></p>
+<p>要注意一下，这篇文章的成文时间比较早了，现在最新的稳定版 OpenWrt 是 <code>23.05.4</code> , 把 URL 里的 <code>21.02.0</code> 换成 <code>23.05.4</code> 就行。</p>
+<h2 id="手动编译-inyn-的-openwrt-包">手动编译 inyn 的 OpenWrt 包</h2>
+<p>首先，我建议你在 Linux 下做这件事情，这个教程大部分内容都是在 Ubuntu 24.04 下完成的，跟着我一步一步做应该不难。</p>
+<p>如果你没有 Linux 使用经验也不想折腾，我建议你等我的 <a href="https://github.com/diredocks/inyn-go">inyn-go</a> 出来，到时候我会提供预编译的软件包，方便你在刷完路由器之后直接安装认证客户端。</p>
+<h3 id="在-ubuntu-上安装-sdk-所需要的依赖">在 Ubuntu 上安装 SDK 所需要的依赖</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install python3-distutils-extra git gawk libncurses-dev build-essential
+</span></span></code></pre></div><h3 id="下载对应设备的-openwrt-sdk">下载对应设备的 OpenWrt SDK</h3>
+<p>上一步下载系统镜像的页面也包含了 SDK 的下载链接，在 Supplementary Files 栏中，找到文件名类似于：<code>openwrt-sdk-*.Linux-x86_64.tar.xz</code> 的文件，在你的 Ubuntu 里下载，然后解压。</p>
+<h3 id="进入解压出的文件夹">进入解压出的文件夹</h3>
+<p>这个文件夹里应该会有这些东西：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>build_dir        COPYING             include   package     rules.mk     target
+</span></span><span style="display:flex;"><span>Config-build.in  dl                  LICENSES  prepare.mk  scripts
+</span></span><span style="display:flex;"><span>Config.in        feeds.conf.default  Makefile  README.md   staging_dir
+</span></span></code></pre></div><h3 id="修改-feedsconfdefault-文件">修改 <code>feeds.conf.default</code> 文件</h3>
+<p>这个文件描述了我们待会儿编译的时候，下载依赖包的来源，默认是 OpenWrt 官方地址，但很不幸我们身处大洋彼岸，官方地址太慢了。</p>
+<p>把所有 <code>git.openwrt.org</code> 都换成第三方镜像，最后类似于这样：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>src-git-full base https://gitee.com/mirrors/OpenWrt.git;openwrt-23.05
+</span></span><span style="display:flex;"><span>src-git packages https://gitee.com/harvey520/packages.git^....
+</span></span><span style="display:flex;"><span>src-git luci https://gitee.com/harvey520/luci.git^....
+</span></span><span style="display:flex;"><span>src-git routing https://gitee.com/harvey520/routing.git^....
+</span></span><span style="display:flex;"><span>src-git telephony https://git.openwrt.org/feed/telephony.git^....
+</span></span></code></pre></div><p>注意不要动后面省略号那部分，那是仓库的 commit 值，用来标识我们到底需要哪个版本的仓库。</p>
+<h3 id="下载和安装仓库信息">下载和安装仓库信息</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>./scripts/feeds update -a
+</span></span><span style="display:flex;"><span>./scripts/feeds install -a
+</span></span></code></pre></div><h3 id="下载并选中我们需要编译的-inyn-包">下载并选中我们需要编译的 inyn 包</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git clone https://github.com/diredocks/openwrt-inyn.git ./package/inyn
+</span></span><span style="display:flex;"><span>make menuconfig
+</span></span></code></pre></div><p>在 <code>menuconfig</code> 的命令行界面中，选中 <code>Network -&gt; inyn</code> 将其首部调整为 <code>&lt;M&gt;</code> 表示按需编译，最后选中 <code>Save -&gt; OK -&gt; Exit</code> 保存配置信息，然后 <code>Exit</code> 退出配置。</p>
+<h3 id="编译-inyn-软件包">编译 inyn 软件包</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>make package/inyn/compile V<span style="color:#f92672">=</span>s
+</span></span></code></pre></div><p>这里会从网上下载源码，而且配置不了镜像，所以我建议你有条件还是开个梯子啥的，要不然很可能卡在这里。</p>
+<p>如果一切顺利的话，你会在 <code>./bin/packages/mipsel_24kc/base</code> 里找到文件名类似于 <code>inyn_*.ipk</code> 的文件，这就是我们编译出来的软件包。</p>
+<p>至于咋安装，你自己上网搜吧（）</p>
+<h2 id="这玩意怎么用">这玩意怎么用</h2>
+<p>既然你已经把你的路由器刷成 OpenWrt 的了，那你应该知道怎么通过 ssh 登陆它。
+登陆之后，查看一下你路由器的 WAN 口名称：</p>
+<p>输入 <code>ip addr</code>，你应该能看到网络设备的信息，其中对于 ip 为 <code>10.xx.xx.xx</code> 的就是连接上校园网网络的设备。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>3: wan: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu <span style="color:#ae81ff">1500</span> qdisc mq state UP group default qlen <span style="color:#ae81ff">1000</span>
+</span></span><span style="display:flex;"><span>    link/ether xx:xx:xx:xx:xx:xx brd ff:ff:ff:ff:ff:ff
+</span></span><span style="display:flex;"><span>    inet 10.xx.xx.xx/23 brd 10.xx.xx.xx scope global wan
+</span></span><span style="display:flex;"><span>       valid_lft forever preferred_lft forever
+</span></span></code></pre></div><p>可以看到我这里这个设备叫 <code>wan</code></p>
+<p>inyn 目前只支持从命令行获取参数登陆，参数的顺序是：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>inyn <span style="color:#f92672">[</span>账户<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>密码<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>对应设备<span style="color:#f92672">]</span>
+</span></span></code></pre></div><p>比方说你的账户是 <code>212402333</code>，密码是 <code>chiputaobutuputaopi</code>，WAN 口对应设备是 <code>wan</code>，运营商是中国联通，那么你使用 inyn 登陆的命令就是：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>inyn 212402333@cucc chiputaobutuputaopi wan
+</span></span></code></pre></div><p>注意这里账户后面要用 <code>@</code> 加上运营商名，其他两家你可以自己搜一下缩写是什么。</p>
+<p>程序开始认证就会输出日志，当出现：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Server: Success.
+</span></span></code></pre></div><p>的时候代表认证成功，你就可以开始上网了。</p>
+<p>但你总不可能老把程序放前台挂着，所以你得自己写个服务让他在后台运行，OpenWrt 使用 procd 管理后台服务，你可以自己研究下这玩意怎么用。</p>
+<p>你甚至可以和 cron 结合一下，达到每晚断网自动关闭热点、节假日自动适应联网等等&hellip;.</p>
+<p>当然，我正在撸的 <a href="https://github.com/diredocks/inyn-go">inyn-go</a> 会自带这些功能，如果你也感兴趣，可以加入我的开发。(╯•̀ὤ•́)╯</p>
+
+</article>
+
+            </div>
+        </main>
+    </body></html>
