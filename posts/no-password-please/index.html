@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
    <meta name="description" content="无数人每天仍然在用 root 密码登陆他们的服务器，且不说允许 root 远程登陆是不是个好的习惯，至少咱能不用密码吗？
 在 Linux 下把你的密钥加入远程服务器很简单，使用命令：
-ssh-copy-id &lt;user&gt;@&lt;hostname&gt; -p &lt;port&gt; 登上你的服务器之后，修改 /etc/ssh/sshd_config 文件，找到 PasswordAuthentication yes ，取消对其的注释，然后改成 PasswordAuthentication no。使用 systemctl restart sshd 重启服务即可。">  
+ssh-copy-id &lt;user&gt;@&lt;hostname&gt; -p &lt;port&gt;
+登上你的服务器之后，修改 /etc/ssh/sshd_config 文件，找到 PasswordAuthentication yes ，取消对其的注释，然后改成 PasswordAuthentication no。使用 systemctl restart sshd 重启服务即可。">  
 
   <title>
     
@@ -18,7 +19,7 @@ ssh-copy-id &lt;user&gt;@&lt;hostname&gt; -p &lt;port&gt; 登上你的服务器�
   
   
   
-  <link rel="stylesheet" href="/blog/css/main.1835acf678793590db3fbeb65bf6810c7f2a59a6e8eb308e6f3d38eb3f0a77bca49d21c7994caf3b31ecefd458bff4c5fcfc5414836ac1ec5b34bde26c7b62cd.css" integrity="sha512-GDWs9nh5NZDbP762W/aBDH8qWabo6zCObz046z8Kd7yknSHHmUyvOzHs79RYv/TF/PxUFINqwexbNL3ibHtizQ==" />
+  <link rel="stylesheet" href="/blog/css/main.e836c79dff63b0fba782f247c0b0c50092e67d1369547800ae8be321f927ac9a0049a01db371ca12e70e2b9f09a974b9295d226a9c5422f8653ff460ae8e1a89.css" integrity="sha512-6DbHnf9jsPungvJHwLDFAJLmfRNpVHgArovjIfknrJoASaAds3HKEucOK58JqXS5KV0iapxUIvhlP/Rgro4aiQ==" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Noto+Sans+SC:wght@100..900&display=swap" rel="stylesheet">

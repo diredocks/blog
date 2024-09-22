@@ -4,13 +4,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
    <meta name="description" content="这标题好长（）
-安装程序分区卡住 目前安装程序 Deploykit 会在清除磁盘后报错，重启再进安装镜像方可解决这个问题。
-修复声音/键盘映射 参考： WeirdTreeThing/chromebook-linux-audio 和 WeirdTreeThing/cros-keyboard-map AOSC OS 的兼容性还是不错的，跑的脚本没有经过更改，直接依照指导运行就能生效。
-修复 Assistant 键 上面的脚本不能修复谷歌助理键，就是普通笔记本上 Meta 键位置上的按键，查看 dmesg 可以发现是内核不知道该怎么映射这个键，很简单，用 sudo showkey ，按下你需要映射到的键位的同时，你应该就能看到对应的键位值，然后使用 sudo setkeycodes e058 &lt;你需要的键位值&gt; 即可完成映射。
-后记 其实很早之前就听闻 AOSC, 只不过那时我玩 Linux 还不熟练，并不是目标用户。
-现在来看，AOSC 的设计哲学和 Arch Linux 颇有几分相似，贴近上游、不过多给自己添戏的作风与国内一众发行版迥异，其搭载的 oma 包管理界面也确实让 apt/dpkg 的使用变得更加轻松。 唯一的不足体现在 depolykit 暂时还不是很完备，没有多语言支持、报错信息甚至会被挡住，不过这些问题无伤大雅。
+安装程序分区卡住
+目前安装程序 Deploykit 会在清除磁盘后报错，重启再进安装镜像方可解决这个问题。
+修复声音/键盘映射
+参考： WeirdTreeThing/chromebook-linux-audio 和 WeirdTreeThing/cros-keyboard-map
+AOSC OS 的兼容性还是不错的，跑的脚本没有经过更改，直接依照指导运行就能生效。
+修复 Assistant 键
+上面的脚本不能修复谷歌助理键，就是普通笔记本上 Meta 键位置上的按键，查看 dmesg 可以发现是内核不知道该怎么映射这个键，很简单，用 sudo showkey ，按下你需要映射到的键位的同时，你应该就能看到对应的键位值，然后使用 sudo setkeycodes e058 &lt;你需要的键位值&gt; 即可完成映射。
+后记
+其实很早之前就听闻 AOSC, 只不过那时我玩 Linux 还不熟练，并不是目标用户。
+现在来看，AOSC 的设计哲学和 Arch Linux 颇有几分相似，贴近上游、不过多给自己添戏的作风与国内一众发行版迥异，其搭载的 oma 包管理界面也确实让 apt/dpkg 的使用变得更加轻松。
+唯一的不足体现在 depolykit 暂时还不是很完备，没有多语言支持、报错信息甚至会被挡住，不过这些问题无伤大雅。
 作为一个小众发行版，安同将近十年的连续开发和类似于国外主流发行版的社区氛围，都体现了开发团队的确认真在做一个“有趣”、“好用”的系统。
-希望安同能在龙架构慢慢被爱好者发掘、把玩的时代背景下，发展出一个更有生命力的社区； 另外今年开源之夏似乎有 AOSC 的项目，不过不知道 if thers&rsquo;s anything I can help&hellip;. 七月份有 AOSCC, 很难得在国内能聚集一帮喜欢玩 Linux 的人，或许我们？七月见！">  
+希望安同能在龙架构慢慢被爱好者发掘、把玩的时代背景下，发展出一个更有生命力的社区；
+另外今年开源之夏似乎有 AOSC 的项目，不过不知道  if thers&rsquo;s anything I can help&hellip;. 七月份有 AOSCC, 很难得在国内能聚集一帮喜欢玩 Linux 的人，或许我们？七月见！">  
 
   <title>
     
@@ -23,7 +30,7 @@
   
   
   
-  <link rel="stylesheet" href="/blog/css/main.1835acf678793590db3fbeb65bf6810c7f2a59a6e8eb308e6f3d38eb3f0a77bca49d21c7994caf3b31ecefd458bff4c5fcfc5414836ac1ec5b34bde26c7b62cd.css" integrity="sha512-GDWs9nh5NZDbP762W/aBDH8qWabo6zCObz046z8Kd7yknSHHmUyvOzHs79RYv/TF/PxUFINqwexbNL3ibHtizQ==" />
+  <link rel="stylesheet" href="/blog/css/main.e836c79dff63b0fba782f247c0b0c50092e67d1369547800ae8be321f927ac9a0049a01db371ca12e70e2b9f09a974b9295d226a9c5422f8653ff460ae8e1a89.css" integrity="sha512-6DbHnf9jsPungvJHwLDFAJLmfRNpVHgArovjIfknrJoASaAds3HKEucOK58JqXS5KV0iapxUIvhlP/Rgro4aiQ==" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Noto+Sans+SC:wght@100..900&display=swap" rel="stylesheet">
