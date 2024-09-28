@@ -6,8 +6,15 @@
     <description>Recent content on 池塘</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Sep 2024 18:29:04 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 28 Sep 2024 21:47:00 +0800</lastBuildDate>
     <atom:link href="https://diredocks.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Me / 我</title>
+      <link>https://diredocks.github.io/blog/about/</link>
+      <pubDate>Sat, 28 Sep 2024 21:47:00 +0800</pubDate>
+      <guid>https://diredocks.github.io/blog/about/</guid>
+      <description>&lt;p&gt;This blog is powered by Hugo, with the theme &lt;a href=&#34;https://github.com/g-hanwen/hugo-theme-nostyleplease&#34;&gt;nostyleplease&lt;/a&gt;.&lt;br&gt;&#xA;这个博客使用 Hugo 驱动，主题为 nostyleplease。&lt;/p&gt;&#xA;&lt;p&gt;I enjoy breakcore and indie music, and my two favorite bands are Radiohead and My Little Airport.&lt;br&gt;&#xA;我喜欢 breakcore 和 indie 音乐，最喜欢的乐队有两支：Radiohead 以及 My Little Airport。&lt;/p&gt;&#xA;&lt;p&gt;My idols are manateelazycat and Richard Stallman.&lt;br&gt;&#xA;我的偶像是 manateelazycat 和 Richard Stallman。&lt;/p&gt;&#xA;&lt;p&gt;I mostly program in Python, and my main device runs NixOS with the KDE desktop environment.&lt;br&gt;&#xA;我平常多使用 Python 编程，主力设备运行 NixOS, K 桌面环境。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Time to Go</title>
       <link>https://diredocks.github.io/blog/posts/time-to-go/</link>
@@ -91,13 +98,6 @@
       <pubDate>Sun, 21 Apr 2024 00:02:42 +0800</pubDate>
       <guid>https://diredocks.github.io/blog/posts/attempting-implement-better-campus-net-client/</guid>
       <description>&lt;p&gt;我一直在用 bitdust 的 &lt;a href=&#34;https://github.com/bitdust/njit8021xclient&#34;&gt;njit8021xclient&lt;/a&gt;，除了一开始的反编译过程令我痛苦无比，后面的使用非常非常顺畅，基本上没出过什么大岔子。校园网的计费系统和行为管理系统是分开的，所以上学期几次被封也不是认证的锅。&lt;/p&gt;&#xA;&lt;p&gt;这个开源的新华三 802.1X 客户端经历了十几年松散的开发，从代码上来看比较丑陋，不过用着没问题，我也就没想着折腾它。而希望能重写一个更好的客户端的念头来源于我最近的 C++ 学习，光看教程十分枯燥，我想着多少写点有用的东西。&lt;/p&gt;&#xA;&lt;p&gt;我没有接触过网络编程，对 C/C++ 体系里的各种工具也不是很适应，CMake 咋用、各种库咋调都不是很清楚，更要命的是，我读过前述项目代码之后发现：它已经十分简洁了，虽然丑陋，但代码足够简单和清晰，并且基本上算是零依赖：除了 libpcap 和 openssl。不过这也是让我有点疑惑的点：它既调用了 openssl, 又自己实现了一些相关的功能，大概是十几年间接续开发的历史遗留问题吧。如果我用 C++ 重写，说不定整出来一个性能和体积都不如这个版本的&lt;del&gt;垃圾&lt;/del&gt;东西&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;现在似乎没有多少高校使用新华三的 802.1X 认证了，即使做出来估计也没多少人会用，何况这类客户端绕不开对原版客户端的二进制逆向，使用门槛比较高，唯一能寄希望的就是某一位使用者能把他环境里的字典数据逆向出来，分享给同环境（单位、学校）的人用。&lt;/p&gt;&#xA;&lt;p&gt;或许等我学得再深入些，能开发一个自动 crack 原版客户端、提取字典的程序？哈哈。&lt;/p&gt;&#xA;&lt;p&gt;我目前的工作集中在理解协议设计上，整理好认证包和认证流程之后，就可以试着熟悉 C++ 生态（构建系统、包管理）了。&lt;/p&gt;&#xA;&lt;p&gt;说是学业繁重，其实有时候希望学校少开点课程该多好，因为就算开这么些课也是考试前抱佛脚，平常不学习多少有点惶惶不可终日，但是又不想学习，只想干自己的事情。&lt;/p&gt;&#xA;&lt;p&gt;至于自己的事情是啥？估计就是这些破事水和重复造轮子的项目吧。&lt;/p&gt;&#xA;&lt;p&gt;ԅ(¯﹃¯ԅ)&lt;/p&gt;&#xA;&lt;p&gt;悄悄在这&lt;br&gt;&#xA;卖个萌&lt;br&gt;&#xA;应该&lt;br&gt;&#xA;不会有人&lt;/p&gt;&#xA;&lt;p&gt;发现&amp;hellip;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>我</title>
-      <link>https://diredocks.github.io/blog/about/</link>
-      <pubDate>Tue, 16 Apr 2024 13:30:00 +0800</pubDate>
-      <guid>https://diredocks.github.io/blog/about/</guid>
-      <description>&lt;p&gt;这个博客使用 Hugo 驱动，主题为 &lt;a href=&#34;https://github.com/g-hanwen/hugo-theme-nostyleplease&#34;&gt;nostyleplease&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;我喜欢 breakcore 和 indie 音乐，最喜欢的乐队有两支：Radiohead 以及 My Little Airport。&lt;/p&gt;&#xA;&lt;p&gt;我的偶像是 manateelazycat 和 Richard Stallman。&lt;/p&gt;&#xA;&lt;p&gt;我平常多使用 Python 编程，主力设备运行 NixOS, K 桌面环境。&lt;/p&gt;&#xA;&lt;p&gt;我正在 &lt;a href=&#34;https://www.learncpp.com/&#34;&gt;learncpp.com&lt;/a&gt; 学习使用 C++ 编程，&#xA;在 2024 年的计划是成为 KDE Contributor, 改善 KDE 下的触控板使用体验。&lt;/p&gt;&#xA;&lt;p&gt;我时常怀恋从前。&lt;/p&gt;&#xA;&lt;p&gt;我会说粤语和普通话，会一点点英语。&lt;/p&gt;&#xA;&lt;p&gt;如果你要联系我，请在我的博客仓库留下一条 issue, 可以包含你的联系方式。&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h1 id=&#34;池塘&#34;&gt;池塘&lt;/h1&gt;&#xA;&lt;p&gt;其实长这么大接触到的池塘都是脏脏的，不过这并不妨碍我幻想一个美好的池塘——甚至最好不是池塘，是湖泊。&lt;/p&gt;&#xA;&lt;p&gt;我和我的好朋友们，在一艘小船上，聊天，啥都不用想。池塘的荷叶上有露珠，早上那种蓝色的，雾蒙蒙的，旁边是森林，小溪，平整的森林，淅沥沥的小雨飘在我们身上。&lt;/p&gt;&#xA;&lt;p&gt;整个世界都静止了，天啊。&lt;/p&gt;&#xA;&lt;p&gt;我们慢慢飘到池塘中心，一切都是这么和谐、自然、美好。&lt;/p&gt;&#xA;&lt;h1 id=&#34;大学&#34;&gt;大学&lt;/h1&gt;&#xA;&lt;p&gt;我就读于一所民办三本院校，坐标福建福州。&lt;/p&gt;&#xA;&lt;p&gt;我的大学生活很无聊，没什么朋友，只是偶尔写些代码看看书。&lt;/p&gt;&#xA;&lt;h1 id=&#34;理想&#34;&gt;理想&lt;/h1&gt;&#xA;&lt;p&gt;构建一个更自由、更开放的互联网。&lt;br&gt;&#xA;Across the Great Wall we can reach every corner in the world.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Another Boring Hello World Post</title>
