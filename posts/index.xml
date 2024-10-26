@@ -2,108 +2,108 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on 池塘</title>
-    <link>http://localhost:1313/blog/posts/</link>
+    <link>https://diredocks.github.io/blog/posts/</link>
     <description>Recent content in Posts on 池塘</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 05 Oct 2024 23:09:36 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://diredocks.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Choose Life</title>
-      <link>http://localhost:1313/blog/posts/choose-life/</link>
+      <link>https://diredocks.github.io/blog/posts/choose-life/</link>
       <pubDate>Sat, 05 Oct 2024 23:09:36 +0800</pubDate>
-      <guid>http://localhost:1313/blog/posts/choose-life/</guid>
+      <guid>https://diredocks.github.io/blog/posts/choose-life/</guid>
       <description>&lt;p&gt;We can’t really do much in this day and age, not for regular people—those with just average looks, intelligence, or money. Back when I was in junior high, my biology teacher said birds are constantly on the hunt for food, day and night, without rest. Aren’t we a lot like those little creatures?&lt;/p&gt;&#xA;&lt;p&gt;Building a hobby requires time, money, and attention—resources most of us don’t have in abundance. Losing touch with hobbies shuts down many opportunities for us. We miss out on connecting with a broader social circle, gaining real-life experiences, and truly enjoying life. It paints a pretty pessimistic picture.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Time to Go</title>
-      <link>http://localhost:1313/blog/posts/time-to-go/</link>
+      <link>https://diredocks.github.io/blog/posts/time-to-go/</link>
       <pubDate>Sat, 28 Sep 2024 18:29:04 +0800</pubDate>
-      <guid>http://localhost:1313/blog/posts/time-to-go/</guid>
+      <guid>https://diredocks.github.io/blog/posts/time-to-go/</guid>
       <description>&lt;p&gt;I often find myself reflecting on moments from the past. I know there&amp;rsquo;s always a voice in my head saying, &amp;lsquo;Understanding your past is essential for reaching the future.&amp;rsquo; But let’s be honest: every time I revisit my unfinished projects or failures, all I feel is regret—nothing more.&lt;/p&gt;&#xA;&lt;p&gt;To open your mind means to filter out the noise around you, including echoes from the past. We need to focus on what lies ahead and recognize that we can&amp;rsquo;t change history.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Worn Out</title>
-      <link>http://localhost:1313/blog/posts/worn-out/</link>
+      <link>https://diredocks.github.io/blog/posts/worn-out/</link>
       <pubDate>Sat, 28 Sep 2024 18:08:07 +0800</pubDate>
-      <guid>http://localhost:1313/blog/posts/worn-out/</guid>
+      <guid>https://diredocks.github.io/blog/posts/worn-out/</guid>
       <description>&lt;p&gt;Dealing with clueless people is one of the hardest things in life.&lt;/p&gt;&#xA;&lt;p&gt;I actually appreciate the ones who are genuinely clueless but honest about it. At least they&amp;rsquo;re straightforward. But then there are those who pretend to know something, only to manipulate and take advantage of you, like you&amp;rsquo;re disposable.&lt;/p&gt;&#xA;&lt;p&gt;It&amp;rsquo;s disappointing, frustrating, and downright disgusting.&lt;/p&gt;&#xA;&lt;p&gt;I can&amp;rsquo;t stand these people, and I&amp;rsquo;ve decided to do everything I can to distance myself from them.&lt;/p&gt;</description>
     </item>
     <item>
       <title>至专校园网攻略</title>
-      <link>http://localhost:1313/blog/posts/zhicheng-campus-network-guide/</link>
+      <link>https://diredocks.github.io/blog/posts/zhicheng-campus-network-guide/</link>
       <pubDate>Tue, 10 Sep 2024 20:32:06 +0800</pubDate>
-      <guid>http://localhost:1313/blog/posts/zhicheng-campus-network-guide/</guid>
+      <guid>https://diredocks.github.io/blog/posts/zhicheng-campus-network-guide/</guid>
       <description>&lt;p&gt;&lt;strong&gt;日后你惹出祸来，不把师父说出来就行了&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;校园网概况&#34;&gt;校园网概况&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;名义上有三家运营商，但实际出口只有联通和移动两家，2024 年秋季开学以来，电信好像消失了；&lt;/li&gt;&#xA;&lt;li&gt;所以无论你办哪家的校园网，校园网（有线网络、校园热点）的网络质量都是一样的；&lt;/li&gt;&#xA;&lt;li&gt;没有 ipv6；&lt;/li&gt;&#xA;&lt;li&gt;教务处的服务不需要内网，你不买校园网也可以正常选课。&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;认证客户端inyn&#34;&gt;认证客户端：inyn&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;自由不是你想做什么就能做什么，而是你不想做什么就可以不做什么 —— 伊曼努尔·康德&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;你想要在学校上网，对吗？你还想要多台设备同时上网，而不是被限制登陆数量，对吗？&#xA;有时候你并没有在用 Windows, 而是用别的系统，你希望插上网线也能认证，对吗？&#xA;又或者你使用 Windows ，也接受不了一个又大又可疑的认证客户端，对吗？&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/diredocks/inyn&#34;&gt;inyn&lt;/a&gt; 就是为您设计的 : )&lt;/p&gt;&#xA;&lt;p&gt;inyn 是一个现代新华三 802.1x 标准认证客户端。它的全称是 “I am Not Your Node”，而新华三官方的认证客户端叫 iNode。&lt;/p&gt;&#xA;&lt;p&gt;使用 inyn, 您可以在各种平台上认证校园网。只要配置好账号密码，它会自动认证，并在认证失败时告诉你哪里出错了。&lt;/p&gt;&#xA;&lt;p&gt;你可能会觉得，自己编译和配置会不会特别麻烦？没错，它就是这么麻烦，不过它的后继版本 &lt;a href=&#34;https://github.com/diredocks/inyn-go&#34;&gt;inyn-go&lt;/a&gt; 正在由一个校园网害虫精心开发，届时会有更清晰的文档和 Web 配置前端，并支持更多功能（定时断网、失败回调&amp;hellip;）&lt;/p&gt;&#xA;&lt;p&gt;inyn 基于 bitdust 的 njit8021xclient 分支开发，njit8021xclient 来自南京工程学院和开源社群，向所有研究协议和实现的大侠们致敬～&lt;/p&gt;&#xA;&lt;h2 id=&#34;路由器刷机&#34;&gt;路由器刷机&lt;/h2&gt;&#xA;&lt;p&gt;选择一个可以刷成 OpenWrt 的路由器，红米 ac2100 和 wr30u 都是不错的选择。我自己用的是 ac2100, 不支持 wifi6, 不过价格比较亲民，学校的网速也能跑满。&lt;/p&gt;&#xA;&lt;p&gt;我想在这里省略具体的做法，因为这件事的教程在网上很多，你可以自己找。&#xA;比方说，这是我参考的刷机教程：&lt;a href=&#34;https://www.lotlab.org/2021/06/13/install-openwrt-on-redmi-ac2100/&#34;&gt;红米 AC2100 路由器刷 OpenWrt 教程&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;要注意一下，这篇文章的成文时间比较早了，现在最新的稳定版 OpenWrt 是 &lt;code&gt;23.05.4&lt;/code&gt; , 把 URL 里的 &lt;code&gt;21.02.0&lt;/code&gt; 换成 &lt;code&gt;23.05.4&lt;/code&gt; 就行。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Nand2UnitTest：从与非门到单元测试</title>
-      <link>http://localhost:1313/blog/posts/nand2unittest/</link>
+      <link>https://diredocks.github.io/blog/posts/nand2unittest/</link>
       <pubDate>Tue, 06 Aug 2024 23:38:20 +0800</pubDate>
-      <guid>http://localhost:1313/blog/posts/nand2unittest/</guid>
+      <guid>https://diredocks.github.io/blog/posts/nand2unittest/</guid>
       <description>&lt;p&gt;我最近在做一个叫做 &lt;a href=&#34;https://www.nand2tetris.org/&#34;&gt;Nand2Tetris&lt;/a&gt; 的课程，主要是关于计算机组成原理的，从与非们出发，最好搭建出一部完整的计算机系统。&lt;/p&gt;&#xA;&lt;p&gt;这门课分为两个部分，第一部分侧重硬件，从与非门开始，搭建完整的计算机平台（这门课搭建的平台叫 Hack）；第二部分侧重软件，你需要实现 Hack 汇编器、编译器、标准库、操作系统，最后在这个平台上&lt;strong&gt;像个正常人类一样开发应用&lt;/strong&gt;。&lt;/p&gt;&#xA;&lt;p&gt;我刚完成了第一部分，体感不错，应该是因为这部分比较简单（这部分没有深入讲流水、数据总线等内容，我准备到时候看 CS61C 补习）。接下来就是软件部分了，据说很难，但是可能会挺有意思。&lt;/p&gt;&#xA;&lt;p&gt;在第一部分的最后，实现 Hack CPU 的时候，我已经基本没什么很通畅的思路了，主要依靠单元测试慢慢摸索出合适的连接和组件。我以前写程序对测试真没啥感觉，直到有位老哥提醒了我，我才慢慢了解还有测试这回事，但当时感受也不怎么深，大概是还没遇到坑吧。&lt;/p&gt;&#xA;&lt;p&gt;所以第二部分大概会把单元测试看得很重，不过或许也不应该这样？感觉要变成面向用例编程了（）&lt;/p&gt;&#xA;&lt;p&gt;关于测试，其实还有一些很有趣的思路，比方说这里有一位逆向工程师，他&lt;a href=&#34;https://linux.do/t/topic/93277/1&#34;&gt;利用测试覆盖率探测程序执行路径&lt;/a&gt;，总之要踩的坑还很多，很多&amp;hellip;&lt;/p&gt;</description>
     </item>
     <item>
       <title>昭和遗珠：冈本舞子</title>
-      <link>http://localhost:1313/blog/posts/finding_maiko/</link>
+      <link>https://diredocks.github.io/blog/posts/finding_maiko/</link>
       <pubDate>Sun, 28 Jul 2024 23:58:34 +0800</pubDate>
-      <guid>http://localhost:1313/blog/posts/finding_maiko/</guid>
+      <guid>https://diredocks.github.io/blog/posts/finding_maiko/</guid>
       <description>&lt;blockquote&gt;&#xA;&lt;p&gt;今、 とっても JUICY AGE&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;我最近非常喜欢昭和时期的少女偶像艺人，中森明菜、松田圣子之类的。以及一个非常冷门的歌手：&lt;strong&gt;冈本舞子&lt;/strong&gt;。起因是听到一个非常棒的 Citypop &lt;a href=&#34;https://www.youtube.com/watch?v=igd-Icmc-xc&#34;&gt;歌单&lt;/a&gt;，一听钟情。&lt;/p&gt;&#xA;&lt;p&gt;非常可惜的是，她仅仅活动了三年左右就退役了，大约是在 1984 到 1987 年，期间发行了两张专辑：《ハートの扉》（心之门）和《ファッシネイション》（Fansination），都是在胜利唱片（Victor Entertainment）旗下。另外，她还演唱了《魔法の妖精ペルシャ》（魔法妖精贝露莎）的主题曲《見知らぬ国のトリッパー》。&lt;/p&gt;&#xA;&lt;p&gt;这两张专辑的制作阵容非常优秀：秋元康、阿久悠、松井五郎等人担任作词，编曲则是由山川恵津子全包。在甜腻小情歌为主流的 80 年代偶像界，两张专辑极具记忆点的旋律和前卫的编曲让其极为独特，冈本舞子本人的演唱也很好的契合了专辑的主题。&lt;/p&gt;&#xA;&lt;p&gt;但很遗憾，当年这两张专辑卖的并不好。结合当时的历史背景，有可能是受知名偶像“冈田有希子”自杀风波的影响，以及偶像时代后期“小猫俱乐部”爆火的影响。当时的人们似乎更推崇素人、养成系偶像团体，对冈本舞子这种正统派偶像审美疲劳。&lt;/p&gt;&#xA;&lt;p&gt;我尝试在互联网上搜寻她的信息，很遗憾，几乎一无所获。但好奇心驱使着我用雅虎日本之类的搜索引擎，和日本常用的 SNS 平台搜索她的信息，更多了一些，但关于她的很多信息仍然是个谜：为什么这么短时间就退出艺能界了？为什么选择出道？隐退之后去干什么了？&lt;/p&gt;&#xA;&lt;p&gt;我跟踪到了她当年一些粉丝的社交媒体，但他们似乎也并不比我知道的更多。但从其中一个粉丝与冈本舞子本人的一次交谈中，我们能了解到她后期“似乎对这个职业十分厌倦”。当时的艺能界，女偶像的生存环境的确不容乐观，作为业内人士，她或许比我们更了解内幕，作为一个有正义感的人（她曾经透露自己小时候希望成为律师），这或许能让我们一窥她隐退的缘由。&lt;/p&gt;&#xA;&lt;p&gt;我在互联网档案馆上存档了一些有关她的网站页面，你可以&lt;a href=&#34;https://archive.org/details/@campfire6482/web-archive&#34;&gt;点这里&lt;/a&gt;查阅。&lt;/p&gt;&#xA;&lt;p&gt;在 2017 年，她的两张专辑都被重新混音、出版，但直到最近才流媒体解禁。如今，你可以在 Youtube Music 上欣赏她的歌曲，以及一些存世不多的视频，但在 2023 年之前，她的音乐就像是失传媒体，即使刻意收集也很难找全。&lt;/p&gt;&#xA;&lt;p&gt;这或许也是为什么她没有赶上 2020 年的 Citypop 复兴浪潮：在当时，同样是冷门偶像&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E6%9D%BE%E5%8E%9F%E7%BE%8E%E7%B4%80&#34;&gt;松原美纪&lt;/a&gt;的单曲《&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E5%8D%88%E5%A4%9C%E4%B9%8B%E9%96%80~Stay_With_Me&#34; title=&#34;午夜之门~Stay With Me&#34;&gt;午夜之门~Stay With Me&lt;/a&gt;》在互联网上爆火，很不幸，松原美纪在 2004 年因子宫颈癌去世。&lt;/p&gt;&#xA;&lt;p&gt;冈本舞子最后在互联网上出现的踪迹是 2019 年，出现在日本艺人日出郎的 Facebook 短片中。虽然作为艺人活动时间很短、又有如此的天资，令人遗憾，但希望她隐退后过着幸福的生活。&lt;/p&gt;</description>
     </item>
     <item>
       <title>计划把 Quick Preview 带到 KDE</title>
-      <link>http://localhost:1313/blog/posts/kuick-1/</link>
+      <link>https://diredocks.github.io/blog/posts/kuick-1/</link>
       <pubDate>Tue, 11 Jun 2024 22:39:00 +0800</pubDate>
-      <guid>http://localhost:1313/blog/posts/kuick-1/</guid>
+      <guid>https://diredocks.github.io/blog/posts/kuick-1/</guid>
       <description>&lt;p&gt;macOS 上有一个很好用的功能，空格预览选中文件。&lt;/p&gt;&#xA;&lt;p&gt;Windows 上有很多功能类似的复刻，比如：&lt;a href=&#34;https://github.com/QL-Win/QuickLook&#34;&gt;QuickLook&lt;/a&gt;、&lt;a href=&#34;https://github.com/ccseer/Seer&#34;&gt;Seer&lt;/a&gt; 和 &lt;a href=&#34;https://github.com/shibayan/WinQuickLook&#34;&gt;WinQuickLook&lt;/a&gt;。Gnome 底下有 &lt;a href=&#34;https://gitlab.gnome.org/GNOME/sushi&#34;&gt;Sushi&lt;/a&gt;。我大 KDE 曾经也有类似的功能（&lt;a href=&#34;https://github.com/KDE/klook&#34;&gt;klook&lt;/a&gt;）可惜已经停更很久了。另外也有类似的复刻项目：&lt;a href=&#34;https://github.com/Nyre221/Kiview&#34;&gt;KiView&lt;/a&gt;，不过还很粗糙。&lt;/p&gt;&#xA;&lt;p&gt;暑假继续学 C++，然后把这个玩意儿做了，就起名 &lt;a href=&#34;https://github.com/diredocks/kuick&#34;&gt;Kuick&lt;/a&gt; 好了。&lt;/p&gt;&#xA;&lt;p&gt;一些目标：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;基于 Qt6 和现代构建系统&lt;/li&gt;&#xA;&lt;li&gt;复刻 Seer 的预览 UI&lt;/li&gt;&#xA;&lt;li&gt;性能要强，体积要小&lt;/li&gt;&#xA;&lt;li&gt;和 KDE 深度集成&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;另外还挖过坑：改善 KDE 桌面环境的触控板体验，&lt;del&gt;不过不知道啥时候才填&lt;/del&gt;。&lt;/p&gt;&#xA;&lt;p&gt;就这样吧。&lt;/p&gt;</description>
     </item>
     <item>
       <title>请用密钥登陆 SSH</title>
-      <link>http://localhost:1313/blog/posts/no-password-please/</link>
+      <link>https://diredocks.github.io/blog/posts/no-password-please/</link>
       <pubDate>Fri, 17 May 2024 14:31:09 +0800</pubDate>
-      <guid>http://localhost:1313/blog/posts/no-password-please/</guid>
+      <guid>https://diredocks.github.io/blog/posts/no-password-please/</guid>
       <description>&lt;p&gt;无数人每天仍然在用 root 密码登陆他们的服务器，且不说允许 root 远程登陆是不是个好的习惯，至少咱能不用密码吗？&lt;/p&gt;&#xA;&lt;p&gt;在 Linux 下把你的密钥加入远程服务器很简单，使用命令：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ssh-copy-id &amp;lt;user&amp;gt;@&amp;lt;hostname&amp;gt; -p &amp;lt;port&amp;gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;登上你的服务器之后，修改 &lt;code&gt;/etc/ssh/sshd_config&lt;/code&gt; 文件，找到 &lt;code&gt;PasswordAuthentication yes&lt;/code&gt; ，取消对其的注释，然后改成 &lt;code&gt;PasswordAuthentication no&lt;/code&gt;。使用 &lt;code&gt;systemctl restart sshd&lt;/code&gt; 重启服务即可。&lt;/p&gt;</description>
     </item>
     <item>
       <title>搭建拥有安全证书的 Gost 隧道</title>
-      <link>http://localhost:1313/blog/posts/safe-gost-tunnel/</link>
+      <link>https://diredocks.github.io/blog/posts/safe-gost-tunnel/</link>
       <pubDate>Thu, 16 May 2024 22:23:04 +0800</pubDate>
-      <guid>http://localhost:1313/blog/posts/safe-gost-tunnel/</guid>
+      <guid>https://diredocks.github.io/blog/posts/safe-gost-tunnel/</guid>
       <description>&lt;p&gt;Gost 是 GO 语言实现的安全隧道，但是其默认 TLS 自签证书并不安全，参考这篇文章：&lt;a href=&#34;https://iamddch.com.cn/2020/05/23/WhyGostTlsNotSafe/&#34;&gt;为什么Gost TLS隧道的默认配置不安全&lt;/a&gt;，本篇博文记录如何正确搭建 Relay over wss 隧道，并将其转发到服务器上的 Cloudflare Warp 代理。&lt;/p&gt;&#xA;&lt;h2 id=&#34;安装-certbot&#34;&gt;安装 certbot&lt;/h2&gt;&#xA;&lt;p&gt;acme.sh 太麻烦了，这里用 certbot。我的系统是 Debian，其他系统可以查看官方文档介绍的安装方法。这里注意域名需要完整域名，同时&lt;strong&gt;要把防火墙的 80 端口打开用于认证。&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt install cerbot &lt;span style=&#34;color:#75715e&#34;&gt;# 安装&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo certbot certonly -d &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;lt;你的网站域名&amp;gt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# 生成证书&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo ls /etc/letsencrypt/live/&amp;lt;你的网站域名&amp;gt; &lt;span style=&#34;color:#75715e&#34;&gt;# 看看成功没&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;配置-warp&#34;&gt;配置 warp&lt;/h2&gt;&#xA;&lt;p&gt;这里就不用那些乱七八糟的第三方客户端了，用官方的 warp-cli，warp+ 密钥可以自己找，网上有很多。&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;warp-cli register &lt;span style=&#34;color:#75715e&#34;&gt;# 注册&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;warp-cli set-mode proxy &lt;span style=&#34;color:#75715e&#34;&gt;# 设置代理模式&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;warp-cli set-lisence &amp;lt;你的 WARP 密钥&amp;gt; &lt;span style=&#34;color:#75715e&#34;&gt;# 设置密钥&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;warp-cli set-proxy-port &lt;span style=&#34;color:#ae81ff&#34;&gt;7865&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# 设置代理端口&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;warp-cli connect &lt;span style=&#34;color:#75715e&#34;&gt;# 连接到 Warp&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;配置-gost&#34;&gt;配置 gost&lt;/h2&gt;&#xA;&lt;p&gt;随便找个地方放 gost，配置文件如下。我这里用 53 端口连接，转发到 7865 端口上的 socks 代理。&lt;/p&gt;</description>
     </item>
     <item>
       <title>寄</title>
-      <link>http://localhost:1313/blog/posts/fucked-up-life/</link>
+      <link>https://diredocks.github.io/blog/posts/fucked-up-life/</link>
       <pubDate>Sun, 12 May 2024 19:56:43 +0800</pubDate>
-      <guid>http://localhost:1313/blog/posts/fucked-up-life/</guid>
+      <guid>https://diredocks.github.io/blog/posts/fucked-up-life/</guid>
       <description>&lt;p&gt;早上给小陈送完听力资料，搭公交回学校已经是下午两点了。肚子这几天一直很疼，早上也没吃饭，疼得不想吃。想学一会 C++ 又实在集中不了注意力，遂躺回床上睡觉。&lt;/p&gt;&#xA;&lt;p&gt;醒来已经是下午五点了，群里在讨论明年涨学费的事儿，从 1.9w 涨到 2.4w。唉，别想。又还能怎么办呢。&lt;/p&gt;&#xA;&lt;p&gt;吃完饭欲求未满，又买了个汉堡吃，这几天吃得东西一直很杂，也很不规律，大概是为啥肚子疼吧。时间过得好快，又一个学期要过去了，前段时间学的 C++ 又快忘光了，不得不重新捡起来，我最开始是为啥要学来着？哦，是为了改 KWin.&lt;/p&gt;&#xA;&lt;p&gt;这段时间在忙活开源之夏的事情，如果能入选该多好。暑假不知道去不去 hvv，估计是不会去了，在家啃老，哈哈哈。&lt;/p&gt;&#xA;&lt;p&gt;感觉到自己无能为力的时候只能不去思考这些事情，活在当下，又或者是肠道菌群在作祟。&lt;/p&gt;</description>
     </item>
     <item>
       <title>逃避深刻</title>
-      <link>http://localhost:1313/blog/posts/escape-from-reality/</link>
+      <link>https://diredocks.github.io/blog/posts/escape-from-reality/</link>
       <pubDate>Fri, 10 May 2024 23:54:58 +0800</pubDate>
-      <guid>http://localhost:1313/blog/posts/escape-from-reality/</guid>
+      <guid>https://diredocks.github.io/blog/posts/escape-from-reality/</guid>
       <description>&lt;p&gt;最近河南说唱之神的《工厂》很火，别怀疑，这个歌手就叫做“河南说唱之神”。和之前万能青年旅店火的点差不多：歌好听、抨击社会现象，所谓的”走心“。看到更多年轻人开始关心这些东西，我很高兴，但又感觉身在其中事不由己，毕竟经济下行的年代才会有这么多人开始重拾”人文关怀“，经济好的时候大家都听 TFBoys 呢。&lt;/p&gt;&#xA;&lt;p&gt;我从小就挺关心社会，最开始是猎奇，后来慢慢长大，才意识到这些东西和我也脱不开干系；认识到这点之后我反而想闭嘴了，天天那么苦大仇深干啥呢？得做好自己，世界才会变得更好一点。&lt;/p&gt;&#xA;&lt;p&gt;坦白说，也有可能是我现在的日子太舒服了，网上有个说法：”屁股决定脑袋“。我没感觉像读中学的时候被老师”压迫“、被领导”压迫“，也就没那么关心别人。热心肠多少有点假大空，太多的事情我管不了，看着又难受，干脆不看，开心点。&lt;/p&gt;&#xA;&lt;p&gt;朋友们都还在念中学，因为成绩不好去复读了，当然读得很痛苦。中国的中学教育正在越来越魔怔，这种魔怔现在传染到小学、幼儿园，甚至大学。继续这样下去，我深为国家未来而担忧，毕竟一个人在他的整个少年时期都呆在堪比奥斯维辛的地方念书、生活，难免培养出一些精神变态。&lt;/p&gt;&#xA;&lt;p&gt;人是好了伤疤忘了痛的。等到我有了孩子，我能不能共情我的孩子？就像我的父母包容我一样。我不知道，也不想想。&lt;/p&gt;&#xA;&lt;p&gt;这些年我也被洗脑太多，虽然自诩”清醒“，但短视、功利、焦虑，这些多年受训留下的品质，还是在我内心占据了极大的位置。我应该学会多包容别人，学会更好地沟通，人类毕竟是社会动物，世界也不只有代码。&lt;/p&gt;&#xA;&lt;p&gt;我前段时间特喜欢听花儿乐队的《幸福的旁边》，那是大张伟早期做流行朋克时期的作品，够悦耳够带劲儿，把中学生想的那些事儿都说出来了。后来他不做类似的东西了，在”逃避深刻“。直面深刻真的太困难了，多少人受不了就崩溃了？&lt;/p&gt;&#xA;&lt;p&gt;我现在很少对新闻发表看法，唯一的看法是没有重要的新闻了，谁死了、谁又升官了、谁和谁又打起来了，听了这么多我脑袋都是花的。有时候我会觉得体制有问题，不是说哪个国家的体制，而是这个世界运行的方式，不过我也说不出所以然来，于是就这么埋头活着。&lt;/p&gt;&#xA;&lt;p&gt;大陆富士康的工人在为美国的苹果公司生产手机，这不只是某一个国家的问题。&lt;/p&gt;&#xA;&lt;p&gt;我只是没有勇气&amp;hellip;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>在 Pixelbook Go 上安装 AOSC 的坑 feat.我的碎碎念</title>
-      <link>http://localhost:1313/blog/posts/pixelbook-go-with-aosc/</link>
+      <link>https://diredocks.github.io/blog/posts/pixelbook-go-with-aosc/</link>
       <pubDate>Mon, 29 Apr 2024 00:24:03 +0800</pubDate>
-      <guid>http://localhost:1313/blog/posts/pixelbook-go-with-aosc/</guid>
+      <guid>https://diredocks.github.io/blog/posts/pixelbook-go-with-aosc/</guid>
       <description>&lt;p&gt;这标题好长（）&lt;/p&gt;&#xA;&lt;h2 id=&#34;安装程序分区卡住&#34;&gt;安装程序分区卡住&lt;/h2&gt;&#xA;&lt;p&gt;目前安装程序 Deploykit 会在清除磁盘后报错，重启再进安装镜像方可解决这个问题。&lt;/p&gt;&#xA;&lt;h2 id=&#34;修复声音键盘映射&#34;&gt;修复声音/键盘映射&lt;/h2&gt;&#xA;&lt;p&gt;参考： &lt;a href=&#34;https://github.com/WeirdTreeThing/chromebook-linux-audio&#34;&gt;WeirdTreeThing/chromebook-linux-audio&lt;/a&gt; 和 &lt;a href=&#34;https://github.com/WeirdTreeThing/cros-keyboard-map&#34;&gt;WeirdTreeThing/cros-keyboard-map&lt;/a&gt;&#xA;AOSC OS 的兼容性还是不错的，跑的脚本没有经过更改，直接依照指导运行就能生效。&lt;/p&gt;&#xA;&lt;h2 id=&#34;修复-assistant-键&#34;&gt;修复 Assistant 键&lt;/h2&gt;&#xA;&lt;p&gt;上面的脚本不能修复谷歌助理键，就是普通笔记本上 Meta 键位置上的按键，查看 dmesg 可以发现是内核不知道该怎么映射这个键，很简单，用 &lt;code&gt;sudo showkey&lt;/code&gt; ，按下你需要映射到的键位的同时，你应该就能看到对应的键位值，然后使用 &lt;code&gt;sudo setkeycodes e058 &amp;lt;你需要的键位值&amp;gt;&lt;/code&gt; 即可完成映射。&lt;/p&gt;&#xA;&lt;h2 id=&#34;后记&#34;&gt;后记&lt;/h2&gt;&#xA;&lt;p&gt;其实很早之前就听闻 AOSC, 只不过那时我玩 Linux 还不熟练，并不是目标用户。&lt;/p&gt;&#xA;&lt;p&gt;现在来看，AOSC 的设计哲学和 Arch Linux 颇有几分相似，贴近上游、不过多给自己添戏的作风与国内一众发行版迥异，其搭载的 &lt;code&gt;oma&lt;/code&gt; 包管理界面也确实让 &lt;code&gt;apt/dpkg&lt;/code&gt; 的使用变得更加轻松。&#xA;唯一的不足体现在 &lt;code&gt;depolykit&lt;/code&gt; 暂时还不是很完备，没有多语言支持、报错信息甚至会被挡住，不过这些问题无伤大雅。&lt;/p&gt;&#xA;&lt;p&gt;作为一个小众发行版，安同将近十年的连续开发和类似于国外主流发行版的社区氛围，都体现了开发团队的确认真在做一个“有趣”、“好用”的系统。&lt;/p&gt;&#xA;&lt;p&gt;希望安同能在龙架构慢慢被爱好者发掘、把玩的时代背景下，发展出一个更有生命力的社区；&#xA;另外今年开源之夏似乎有 AOSC 的项目，不过不知道  if thers&amp;rsquo;s anything I can help&amp;hellip;. 七月份有 AOSCC, 很难得在国内能聚集一帮喜欢玩 Linux 的人，或许我们？七月见！&lt;/p&gt;</description>
     </item>
     <item>
       <title>试着写一个更好的校园网认证客户端</title>
-      <link>http://localhost:1313/blog/posts/attempting-implement-better-campus-net-client/</link>
+      <link>https://diredocks.github.io/blog/posts/attempting-implement-better-campus-net-client/</link>
       <pubDate>Sun, 21 Apr 2024 00:02:42 +0800</pubDate>
-      <guid>http://localhost:1313/blog/posts/attempting-implement-better-campus-net-client/</guid>
+      <guid>https://diredocks.github.io/blog/posts/attempting-implement-better-campus-net-client/</guid>
       <description>&lt;p&gt;我一直在用 bitdust 的 &lt;a href=&#34;https://github.com/bitdust/njit8021xclient&#34;&gt;njit8021xclient&lt;/a&gt;，除了一开始的反编译过程令我痛苦无比，后面的使用非常非常顺畅，基本上没出过什么大岔子。校园网的计费系统和行为管理系统是分开的，所以上学期几次被封也不是认证的锅。&lt;/p&gt;&#xA;&lt;p&gt;这个开源的新华三 802.1X 客户端经历了十几年松散的开发，从代码上来看比较丑陋，不过用着没问题，我也就没想着折腾它。而希望能重写一个更好的客户端的念头来源于我最近的 C++ 学习，光看教程十分枯燥，我想着多少写点有用的东西。&lt;/p&gt;&#xA;&lt;p&gt;我没有接触过网络编程，对 C/C++ 体系里的各种工具也不是很适应，CMake 咋用、各种库咋调都不是很清楚，更要命的是，我读过前述项目代码之后发现：它已经十分简洁了，虽然丑陋，但代码足够简单和清晰，并且基本上算是零依赖：除了 libpcap 和 openssl。不过这也是让我有点疑惑的点：它既调用了 openssl, 又自己实现了一些相关的功能，大概是十几年间接续开发的历史遗留问题吧。如果我用 C++ 重写，说不定整出来一个性能和体积都不如这个版本的&lt;del&gt;垃圾&lt;/del&gt;东西&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;现在似乎没有多少高校使用新华三的 802.1X 认证了，即使做出来估计也没多少人会用，何况这类客户端绕不开对原版客户端的二进制逆向，使用门槛比较高，唯一能寄希望的就是某一位使用者能把他环境里的字典数据逆向出来，分享给同环境（单位、学校）的人用。&lt;/p&gt;&#xA;&lt;p&gt;或许等我学得再深入些，能开发一个自动 crack 原版客户端、提取字典的程序？哈哈。&lt;/p&gt;&#xA;&lt;p&gt;我目前的工作集中在理解协议设计上，整理好认证包和认证流程之后，就可以试着熟悉 C++ 生态（构建系统、包管理）了。&lt;/p&gt;&#xA;&lt;p&gt;说是学业繁重，其实有时候希望学校少开点课程该多好，因为就算开这么些课也是考试前抱佛脚，平常不学习多少有点惶惶不可终日，但是又不想学习，只想干自己的事情。&lt;/p&gt;&#xA;&lt;p&gt;至于自己的事情是啥？估计就是这些破事水和重复造轮子的项目吧。&lt;/p&gt;&#xA;&lt;p&gt;ԅ(¯﹃¯ԅ)&lt;/p&gt;&#xA;&lt;p&gt;悄悄在这&lt;br&gt;&#xA;卖个萌&lt;br&gt;&#xA;应该&lt;br&gt;&#xA;不会有人&lt;/p&gt;&#xA;&lt;p&gt;发现&amp;hellip;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Another Boring Hello World Post</title>
-      <link>http://localhost:1313/blog/posts/hello-world/</link>
+      <link>https://diredocks.github.io/blog/posts/hello-world/</link>
       <pubDate>Tue, 16 Apr 2024 13:05:13 +0800</pubDate>
-      <guid>http://localhost:1313/blog/posts/hello-world/</guid>
+      <guid>https://diredocks.github.io/blog/posts/hello-world/</guid>
       <description>&lt;p&gt;很多事情该说不说，最后烂在肚子里就不想说了，说实话，这么些年下来&#xA;我的表达欲慢慢在降低。我说或者不说又有什么用呢？说得太多，&#xA;反而容易被识破、戳穿。&lt;/p&gt;&#xA;&lt;p&gt;为什么我连自我表达都开始焦虑？&lt;/p&gt;&#xA;&lt;p&gt;社交媒体的侵略性太强，在荧屏面前，好像你不得不点赞、转发、评论，&#xA;才能显得你在乎某个人。&lt;/p&gt;&#xA;&lt;p&gt;我觉得这样挺没劲的。&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;讨好自己，&#xA;现实逃避。&lt;br&gt;&#xA;不知不觉，&lt;br&gt;&#xA;抽离。&lt;br&gt;&#xA;漫天的是非，&#xA;做我的真理。&lt;br&gt;&#xA;一团和气，&lt;br&gt;&#xA;处事道理。&lt;br&gt;&#xA;遮遮掩掩——&lt;br&gt;&#xA;脸皮&lt;br&gt;&#xA;其实都自卑&amp;hellip;&lt;br&gt;&#xA;其实都自欺&amp;hellip;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;我懒得被关注，只想引人注意，所以我还是写写博客吧。&lt;/p&gt;</description>
     </item>
   </channel>
