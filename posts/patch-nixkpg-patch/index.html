@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-us"><head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="我最近给 KWin 加上了触控板三指水平滑动切换窗口的功能，很不幸由于和目前的手势分配有冲突，合并请求被搁置了。但是咱都有源码了，还能干等着不成？
+在 ArchLinux 里，给已有的包打上自己的补丁，只需要抄一下官方仓库里的 PKGBUILD，加上补丁，然后自己构建安装即可。在 NixOS 里也是差不多的，用 overlay 覆盖 nixpkgs 里的包，好处是将来的更新无需手动同步版本，因为只是覆盖原有包的某些构建阶段，一劳永逸。
+NixOS Wiki 里其实说了应该怎么做，不过作为小白我还是遇到了点坑：在某个 scope（你可以理解为包组）里的包不能直接覆盖，而是应该覆盖整个 scope，让覆盖的 scope 里的包改变。
+具体怎么配置请参考这里：https://github.com/diredocks/nix-config/blob/master/nixos/nix.nix#L17 ，不说了，触控板手势的确很爽。">  
+
+  <title>
+    
+      给 Nixpkgs 里的软件打上你自己的补丁
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/blog/" />
+  
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Noto+Sans+SC:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/blog/css/main.8f1aa33e85d875310624f5d6cb34c4ec4441581f210d575e342e9d19bd78f1b810ea836c5310f072f17fbef5066f183d7535a5cf351f215ebe4885d5f77eafbe.css" integrity="sha512-jxqjPoXYdTEGJPXWyzTE7ERBWB8hDVdeNC6dGb148bgQ6oNsUxDwcvF/vvUGbxg9dTWlzzUfIV6&#43;SIXV936vvg==" />
+  
+</head>
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+<a href="/blog/">..</a>
+
+
+<article>
+    <p class="post-meta">
+        <time datetime="2024-10-05 23:09:36 &#43;0800 CST">
+            24/10/05
+        </time>
+    </p>
+
+    <h1>给 Nixpkgs 里的软件打上你自己的补丁</h1>
+
+    
+
+    <p>我最近给 KWin 加上了触控板三指水平滑动切换窗口的功能，很不幸由于和目前的手势分配有冲突，合并请求被搁置了。但是咱都有源码了，还能干等着不成？</p>
+<p>在 ArchLinux 里，给已有的包打上自己的补丁，只需要抄一下官方仓库里的 PKGBUILD，加上补丁，然后自己构建安装即可。在 NixOS 里也是差不多的，用 overlay 覆盖 nixpkgs 里的包，好处是将来的更新无需手动同步版本，因为只是覆盖原有包的某些构建阶段，一劳永逸。</p>
+<p>NixOS Wiki 里其实说了应该<a href="https://nixos.wiki/wiki/Overlays">怎么做</a>，不过作为小白我还是遇到了点坑：在某个 scope（你可以理解为包组）里的包不能直接覆盖，而是应该覆盖整个 scope，让覆盖的 scope 里的包改变。</p>
+<p>具体怎么配置请参考这里：https://github.com/diredocks/nix-config/blob/master/nixos/nix.nix#L17 ，<del>不说了，触控板手势的确很爽</del>。</p>
+
+</article>
+
+            </div>
+        </main>
+    </body></html>

@@ -5,9 +5,16 @@
     <link>https://diredocks.github.io/blog/</link>
     <description>Recent content on 池塘</description>
     <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 05 Oct 2024 23:09:36 +0800</lastBuildDate>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 26 Nov 2024 21:25:12 +0800</lastBuildDate>
     <atom:link href="https://diredocks.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>给 Nixpkgs 里的软件打上你自己的补丁</title>
+      <link>https://diredocks.github.io/blog/posts/patch-nixpkg-overlay/</link>
+      <pubDate>Tue, 26 Nov 2024 21:25:12 +0800</pubDate>
+      <guid>https://diredocks.github.io/blog/posts/patch-nixpkg-overlay/</guid>
+      <description>&lt;p&gt;我最近给 KWin 加上了触控板三指水平滑动切换窗口的功能，很不幸由于和目前的手势分配有冲突，合并请求被搁置了。但是咱都有源码了，还能干等着不成？&lt;/p&gt;&#xA;&lt;p&gt;在 ArchLinux 里，给已有的包打上自己的补丁，只需要抄一下官方仓库里的 PKGBUILD，加上补丁，然后自己构建安装即可。在 NixOS 里也是差不多的，用 overlay 覆盖 nixpkgs 里的包，好处是将来的更新无需手动同步版本，因为只是覆盖原有包的某些构建阶段，一劳永逸。&lt;/p&gt;&#xA;&lt;p&gt;NixOS Wiki 里其实说了应该&lt;a href=&#34;https://nixos.wiki/wiki/Overlays&#34;&gt;怎么做&lt;/a&gt;，不过作为小白我还是遇到了点坑：在某个 scope（你可以理解为包组）里的包不能直接覆盖，而是应该覆盖整个 scope，让覆盖的 scope 里的包改变。&lt;/p&gt;&#xA;&lt;p&gt;具体怎么配置请参考这里：https://github.com/diredocks/nix-config/blob/master/nixos/nix.nix#L17 ，&lt;del&gt;不说了，触控板手势的确很爽&lt;/del&gt;。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Choose Life</title>
       <link>https://diredocks.github.io/blog/posts/choose-life/</link>

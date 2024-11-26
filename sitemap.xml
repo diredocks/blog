@@ -2,10 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://diredocks.github.io/blog/posts/choose-life/</loc>
-    <lastmod>2024-10-05T23:09:36+08:00</lastmod>
-  </url><url>
     <loc>https://diredocks.github.io/blog/posts/</loc>
+    <lastmod>2024-11-26T21:25:12+08:00</lastmod>
+  </url><url>
+    <loc>https://diredocks.github.io/blog/posts/patch-nixpkg-overlay/</loc>
+    <lastmod>2024-11-26T21:25:12+08:00</lastmod>
+  </url><url>
+    <loc>https://diredocks.github.io/blog/posts/choose-life/</loc>
     <lastmod>2024-10-05T23:09:36+08:00</lastmod>
   </url><url>
     <loc>https://diredocks.github.io/blog/about/</loc>
