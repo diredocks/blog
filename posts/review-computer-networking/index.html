@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="zh-cn"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="题目类型
+
+  
+      
+          类型
+          分数
+      
+  
+  
+      
+          单选
+          15
+      
+      
+          填空
+          15
+      
+      
+          判断
+          15
+      
+      
+          改错
+          15
+      
+      
+          简答
+          15
+      
+      
+          计算
+          30
+      
+  
+
+体系架构（P31 图1-16）
+OSI 7层协议
+
+应用层
+表示层
+会话层
+运输层
+网络层
+数据链路层
+物理层
+
+TCP/IP 4层协议
+
+  
+      
+          层次
+          功能与示例协议
+      
+  
+  
+      
+          应用层
+          HTTP, SMTP, DNS
+      
+      
+          运输层
+          TCP, UDP
+      
+      
+          网际层
+          IP
+      
+      
+          链路层
+          数据链路和物理层合并
+      
+  
+
+教材 5层协议
+
+  
+      
+          层次
+          功能
+      
+  
+  
+      
+          应用层
+          提供特定网络服务
+      
+      
+          运输层
+          通用进程通信
+      
+      
+          网络层
+          IP数据报、路由器
+      
+      
+          数据链路层
+          帧传输、差错检测、纠错
+      
+      
+          物理层
+          比特传输、电气特性
+      
+  
+
+扩展以太网
+物理层：集线器（P100）
+
+  
+      
+          优点
+          缺点
+      
+  
+  
+      
+          扩大以太网覆盖范围
+          碰撞域变大，通信易受碰撞影响
+      
+      
+          实现跨系通信
+          最大速率受限于最慢连接的设备
+      
+  
+
+数据链路层：交换机（网桥）（P101）
+
+  
+      
+          优点
+          缺点
+      
+  
+  
+      
+          扩大物理范围、提高可靠性
+          存储转发增加了时延
+      
+      
+          可互连不同物理层、不同 MAC 子层和不同速率（如 10 Mb/s 和 100 Mb/s 以太网）的局域网
+          网桥只适合于用户数不太多 (不超过几百个) 和通信量不太大的局域网，否则有时还会因传播过多的广播信息而产生网络拥塞，即广播风暴
+      
+  
+
+常见拓扑的优缺点
+
+  
+      
+          拓扑
+          优点
+          缺点
+      
+  
+  
+      
+          星形拓扑
+          结构简单，便于控制与扩展；故障诊断易；各节点独立
+          中央节点负担重，易成瓶颈；电缆需求多，安装复杂
+      
+      
+          总线型拓扑
+          结构简单，电缆需求少
+          传输距离有限；故障诊断困难；分布式协议难以保证实时传送
+      
+      
+          环形拓扑
+          电缆长度短，易扩展；可用光纤
+          单点故障导致全网失效；故障检查难；负载轻时信道利用率低
+      
+      
+          树形拓扑
+          易于扩展；故障隔离较容易
+          根节点依赖性大
+      
+  
+
+虚电路服务 vs 数据报服务
+
+  
+      
+          特性
+          虚电路服务
+          数据报服务
+      
+  
+  
+      
+          可靠性
+          网络保证
+          用户主机保证
+      
+      
+          是否建立连接
+          是
+          否
+      
+      
+          地址使用
+          连接建立时使用终点地址
+          每个分组都需携带完整终点地址
+      
+      
+          路由
+          同一条虚电路的分组按同一路由转发
+          每个分组独立查表转发
+      
+      
+          故障处理
+          故障节点影响所有虚电路
+          路由变化，部分包可能丢失
+      
+      
+          顺序
+          按顺序接收
+          不一定按顺序接收
+      
+  
+
+RIP工作的特点
+
+仅与相邻路由器交换信息
+交换本路由器的路由表
+按固定时间间隔进行交换
+
+传输层两大协议的特点
+
+  
+      
+          特性
+          TCP
+          UDP
+      
+  
+  
+      
+          连接
+          是
+          否
+      
+      
+          通信方式
+          点对点
+          支持多对多、一对多、一对一
+      
+      
+          可靠性
+          可靠交付
+          尽最大可能交付
+      
+      
+          传输单位
+          面向字节流
+          面向报文
+      
+      
+          拥塞控制
+          有
+          无
+      
+      
+          首部开销
+          较大
+          较小
+      
+  
+
+大题
+编码方式
+课本 P45">  
+
+  <title>
+    
+      计算机网络复习
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/blog/" />
+  
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Noto+Sans+SC:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/blog/css/main.50be686247693878806a79a29f46064bf43d601b5a319ba7536451b2b680cb589b97a855e4f08aa66d87e989db80dab44c3e3d1163b04dd4afb5bbeba693c661.css" integrity="sha512-UL5oYkdpOHiAanmin0YGS/Q9YBtaMZunU2RRsraAy1ibl6hV5PCKpm2H6YnbgNq0TD49EWOwTdSvtbvrppPGYQ==" />
+  
+</head>
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+<a href="/blog/">..</a>
+
+
+<article>
+    <p class="post-meta">
+        <time datetime="2024-12-16 21:06:23 &#43;0800 CST">
+            24/12/16
+        </time>
+    </p>
+
+    <h1>计算机网络复习</h1>
+
+    
+
+    <h2 id="题目类型">题目类型</h2>
+<table>
+  <thead>
+      <tr>
+          <th>类型</th>
+          <th>分数</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>单选</td>
+          <td>15</td>
+      </tr>
+      <tr>
+          <td>填空</td>
+          <td>15</td>
+      </tr>
+      <tr>
+          <td>判断</td>
+          <td>15</td>
+      </tr>
+      <tr>
+          <td>改错</td>
+          <td>15</td>
+      </tr>
+      <tr>
+          <td>简答</td>
+          <td>15</td>
+      </tr>
+      <tr>
+          <td>计算</td>
+          <td>30</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="体系架构p31-图1-16">体系架构（P31 图1-16）</h2>
+<h3 id="osi-7层协议">OSI 7层协议</h3>
+<ol>
+<li>应用层</li>
+<li>表示层</li>
+<li>会话层</li>
+<li>运输层</li>
+<li>网络层</li>
+<li>数据链路层</li>
+<li>物理层</li>
+</ol>
+<h3 id="tcpip-4层协议">TCP/IP 4层协议</h3>
+<table>
+  <thead>
+      <tr>
+          <th>层次</th>
+          <th>功能与示例协议</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>应用层</td>
+          <td>HTTP, SMTP, DNS</td>
+      </tr>
+      <tr>
+          <td>运输层</td>
+          <td>TCP, UDP</td>
+      </tr>
+      <tr>
+          <td>网际层</td>
+          <td>IP</td>
+      </tr>
+      <tr>
+          <td>链路层</td>
+          <td>数据链路和物理层合并</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="教材-5层协议">教材 5层协议</h3>
+<table>
+  <thead>
+      <tr>
+          <th>层次</th>
+          <th>功能</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>应用层</td>
+          <td>提供特定网络服务</td>
+      </tr>
+      <tr>
+          <td>运输层</td>
+          <td>通用进程通信</td>
+      </tr>
+      <tr>
+          <td>网络层</td>
+          <td>IP数据报、路由器</td>
+      </tr>
+      <tr>
+          <td>数据链路层</td>
+          <td>帧传输、差错检测、纠错</td>
+      </tr>
+      <tr>
+          <td>物理层</td>
+          <td>比特传输、电气特性</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="扩展以太网">扩展以太网</h2>
+<h3 id="物理层集线器p100">物理层：集线器（P100）</h3>
+<table>
+  <thead>
+      <tr>
+          <th><strong>优点</strong></th>
+          <th><strong>缺点</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>扩大以太网覆盖范围</td>
+          <td>碰撞域变大，通信易受碰撞影响</td>
+      </tr>
+      <tr>
+          <td>实现跨系通信</td>
+          <td>最大速率受限于最慢连接的设备</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="数据链路层交换机网桥p101">数据链路层：交换机（网桥）（P101）</h3>
+<table>
+  <thead>
+      <tr>
+          <th><strong>优点</strong></th>
+          <th><strong>缺点</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>扩大物理范围、提高可靠性</td>
+          <td>存储转发增加了时延</td>
+      </tr>
+      <tr>
+          <td>可互连不同物理层、不同 MAC 子层和不同速率（如 10 Mb/s 和 100 Mb/s 以太网）的局域网</td>
+          <td>网桥只适合于用户数不太多 (不超过几百个) 和通信量不太大的局域网，否则有时还会因传播过多的广播信息而产生网络拥塞，即广播风暴</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="常见拓扑的优缺点">常见拓扑的优缺点</h2>
+<table>
+  <thead>
+      <tr>
+          <th><strong>拓扑</strong></th>
+          <th><strong>优点</strong></th>
+          <th><strong>缺点</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>星形拓扑</td>
+          <td>结构简单，便于控制与扩展；故障诊断易；各节点独立</td>
+          <td>中央节点负担重，易成瓶颈；电缆需求多，安装复杂</td>
+      </tr>
+      <tr>
+          <td>总线型拓扑</td>
+          <td>结构简单，电缆需求少</td>
+          <td>传输距离有限；故障诊断困难；分布式协议难以保证实时传送</td>
+      </tr>
+      <tr>
+          <td>环形拓扑</td>
+          <td>电缆长度短，易扩展；可用光纤</td>
+          <td>单点故障导致全网失效；故障检查难；负载轻时信道利用率低</td>
+      </tr>
+      <tr>
+          <td>树形拓扑</td>
+          <td>易于扩展；故障隔离较容易</td>
+          <td>根节点依赖性大</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="虚电路服务-vs-数据报服务">虚电路服务 vs 数据报服务</h2>
+<table>
+  <thead>
+      <tr>
+          <th><strong>特性</strong></th>
+          <th><strong>虚电路服务</strong></th>
+          <th><strong>数据报服务</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>可靠性</td>
+          <td>网络保证</td>
+          <td>用户主机保证</td>
+      </tr>
+      <tr>
+          <td>是否建立连接</td>
+          <td>是</td>
+          <td>否</td>
+      </tr>
+      <tr>
+          <td>地址使用</td>
+          <td>连接建立时使用终点地址</td>
+          <td>每个分组都需携带完整终点地址</td>
+      </tr>
+      <tr>
+          <td>路由</td>
+          <td>同一条虚电路的分组按同一路由转发</td>
+          <td>每个分组独立查表转发</td>
+      </tr>
+      <tr>
+          <td>故障处理</td>
+          <td>故障节点影响所有虚电路</td>
+          <td>路由变化，部分包可能丢失</td>
+      </tr>
+      <tr>
+          <td>顺序</td>
+          <td>按顺序接收</td>
+          <td>不一定按顺序接收</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="rip工作的特点">RIP工作的特点</h2>
+<ul>
+<li>仅与相邻路由器交换信息</li>
+<li>交换本路由器的路由表</li>
+<li>按固定时间间隔进行交换</li>
+</ul>
+<h2 id="传输层两大协议的特点">传输层两大协议的特点</h2>
+<table>
+  <thead>
+      <tr>
+          <th><strong>特性</strong></th>
+          <th><strong>TCP</strong></th>
+          <th><strong>UDP</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>连接</td>
+          <td>是</td>
+          <td>否</td>
+      </tr>
+      <tr>
+          <td>通信方式</td>
+          <td>点对点</td>
+          <td>支持多对多、一对多、一对一</td>
+      </tr>
+      <tr>
+          <td>可靠性</td>
+          <td>可靠交付</td>
+          <td>尽最大可能交付</td>
+      </tr>
+      <tr>
+          <td>传输单位</td>
+          <td>面向字节流</td>
+          <td>面向报文</td>
+      </tr>
+      <tr>
+          <td>拥塞控制</td>
+          <td>有</td>
+          <td>无</td>
+      </tr>
+      <tr>
+          <td>首部开销</td>
+          <td>较大</td>
+          <td>较小</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="大题">大题</h2>
+<h3 id="编码方式">编码方式</h3>
+<p>课本 P45</p>
+<h3 id="差错检测纠错">差错检测、纠错</h3>
+<h4 id="crc">CRC</h4>
+<p>Q：生成多项式 G(X) = X^6+X^5+X+1，若信息位为 1101110010001, 求冗余多项式 R(X)？</p>
+<p>A：最高次为6, 冗余码为6位，</p>
+<p>$G(X)=1<em>X^6+1</em>X^5+0<em>X^4+0</em>X^3+0<em>X^2+1</em>X^1+1*X^0$</p>
+<p>故除数为 1100011, 除数为原始数据加上 6 位 0：1101110010001000000
+然后作两数作<strong>摩尔运算（相同得 0, 不同得 1）</strong>，余数记为冗余码：10110</p>
+<p>Q：接收方如何检测差错？</p>
+<p>A：将接收到的数据处以生成多项式的系数，余数为 0 证明接受正确，余数不为 0 证明接受错误。</p>
+<h4 id="海明码">海明码</h4>
+<ul>
+<li>奇校验：需要奇数个 1</li>
+<li>偶校验：需要偶数个 1</li>
+</ul>
+<p>海明码的冗余位数 r 满足以下关系：
+$2^r&gt;=r+m+1$，其中 r 为冗余位，m 为数据位。</p>
+<p>海明码需要插入到 2 的次幂的位置，然后用奇偶校验的方式计算出每一位海明码的 1/0。</p>
+<p>而为了插入海明码，我们首先需要自低位从 1 开始给每一位数据编号（包括海明码本身）。</p>
+<p>例子：为数据 1010 计算海明码：</p>
+<p>计算：$2^r&gt;=r+5$，则满足的最小 r 为 3</p>
+<table>
+  <thead>
+      <tr>
+          <th>数据</th>
+          <th>序号（B）</th>
+          <th>序号（D）</th>
+          <th>参与计算</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>0</td>
+          <td>111</td>
+          <td>7</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>110</td>
+          <td>6</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>0</td>
+          <td>101</td>
+          <td>5</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td><strong>1</strong></td>
+          <td>100</td>
+          <td><strong>4</strong></td>
+          <td>7,6,5,4</td>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>011</td>
+          <td>3</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td><strong>0</strong></td>
+          <td>010</td>
+          <td><strong>2</strong></td>
+          <td>7,6,3,2</td>
+      </tr>
+      <tr>
+          <td><strong>1</strong></td>
+          <td>001</td>
+          <td><strong>1</strong></td>
+          <td>7,5,3,1</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="cdma码分多址">CDMA（码分多址）</h3>
+<p>向量化内积：别急，我也不知道在说什么，直接看个例子。</p>
+<p>Q：四个站进行码分多址 CDMA 通讯，码片序列分别为：</p>
+<p>A. (-1 -1 -1 +1 -1 +1 +1)<br>
+B. (-1 -1 +1 -1 +1 +1 +1 -1)<br>
+C. (-1 +1 -1 +1 +1 +1 -1 -1)<br>
+D. (-1 +1 -1 -1 -1 -1 +1 -1)</p>
+<p>现在收到这样的码片序列：(-1 +1 -3 +1 -1 -3 +1 +1)，请问哪个站发送数据了？发送了什么东西？</p>
+<p>A：S.A=(+1-1+3+1-1+3+1+1)/8=1 -&gt; 发送 1<br>
+B：S.B=(+1-1-3-1-1-3+1-1)/8=-1 -&gt; 发送 0<br>
+C：S.C=(+1+1+3+1-1-3-1-1)/8=0 -&gt; 啥也没发送<br>
+D：S.D=(+1+1+3-1+1+3+1-1)/8=1 -&gt; 发送 1</p>
+<p>总计：相乘后相加，然后处以个数，得到 1 发送 1, 得到 -1 发送 0, 得到 0 啥也没发送。</p>
+<h3 id="ppp-透明传输">PPP 透明传输</h3>
+<h4 id="字节填充">字节填充</h4>
+<ul>
+<li>0×7E -&gt; 0×7D, 0x5E</li>
+<li>0×7D -&gt; 0×7D, 0x5D</li>
+<li>若信息字段中出现ASCll码的控制字符（即数值小于0x20的字符），则在该字符前面要加入一个0x7D字节</li>
+</ul>
+<h4 id="零比特填充">零比特填充</h4>
+<ul>
+<li>在发送端，发现5个连续1，则立即填入一个0</li>
+<li>在接收端，发现5个连续1，则立即删除5个连续1后的一个0</li>
+</ul>
+<h3 id="交换机自学习">交换机自学习</h3>
+<h3 id="ip分片">IP分片</h3>
+<p>常见长度</p>
+<ul>
+<li>TCP 首部 20 字节，UDP 首部 8 字节</li>
+<li>以太网的 MTU 为 1500 字节</li>
+</ul>
+<p>分片</p>
+<ul>
+<li>DF：Don&rsquo;t Fragment, MF: More Fragment</li>
+<li>片偏移字段的单位为 8 字节</li>
+</ul>
+<p>例子：</p>
+<p>Q：已知一个分组的数据部分长度为 3800 字节，网络规定分片长度不能超过 1420 字节，假设 IP 分组的首部采用固定 20 字节。请问原始分组需要分成几个分片？每个分片的总长度、标识字段（原始分组是 666 ）、DF 标志位、MF 标志位、分片偏移字段各是多少？</p>
+<p>A：
+分组长度 3820（头部+数据）-&gt; 3800 （数据）
+分片长度 1420（头部+数据）-&gt; 1400 （每个分片的数据）
+故分为 3800/1400 = 2 余 1000, 3 个分片</p>
+<p>分片偏移只计算数据部分的偏移，指的是当前分片的数据头相较于整个数据头的距离，本题中：<br>
+分片1 的数据从：0-1399,  故偏移为 0/8 = 0<br>
+分片2 的数据从：1400-2799，故偏移为 1400/8 = 175<br>
+分片3 的数据从：2800-3799，故偏移为 2800/8 = 350</p>
+<table>
+  <thead>
+      <tr>
+          <th></th>
+          <th>总长度</th>
+          <th>标识字段</th>
+          <th>DF</th>
+          <th>MF</th>
+          <th>分片偏移</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>原始分组</td>
+          <td>3820</td>
+          <td>666</td>
+          <td>x</td>
+          <td>x</td>
+          <td>x</td>
+      </tr>
+      <tr>
+          <td>分片1</td>
+          <td>1420</td>
+          <td>666</td>
+          <td>0</td>
+          <td>1</td>
+          <td>0</td>
+      </tr>
+      <tr>
+          <td>分片2</td>
+          <td>1420</td>
+          <td>666</td>
+          <td>0</td>
+          <td>1</td>
+          <td>175</td>
+      </tr>
+      <tr>
+          <td>分片3</td>
+          <td>1020</td>
+          <td>666</td>
+          <td>0</td>
+          <td>0</td>
+          <td>350</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="地址计算">地址计算</h3>
+<h4 id="地址聚合">地址聚合</h4>
+<h4 id="子网划分">子网划分</h4>
+<h3 id="cidr">CIDR</h3>
+<h3 id="rip-路由表更新">RIP 路由表更新</h3>
+<h3 id="tcp-三次握手四次释放">TCP 三次握手、四次释放</h3>
+
+</article>
+
+            </div>
+        </main>
+    </body></html>

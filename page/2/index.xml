@@ -1,0 +1,211 @@
+<?xml-stylesheet href="/rss.xsl" type="text/xsl"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>池塘</title>
+    <link>http://localhost:1313/blog/</link>
+    <description>Recent content on 池塘</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 25 Aug 2022 21:30:04 +0800</lastBuildDate>
+    
+        <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>搭建拥有安全证书的 Gost 隧道</title>
+        <link>http://localhost:1313/blog/posts/safe-gost-tunnel/</link>
+        <pubDate>Thu, 16 May 2024 22:23:04 +0800</pubDate>
+        
+        <guid>http://localhost:1313/blog/posts/safe-gost-tunnel/</guid>
+        <description>池塘 http://localhost:1313/blog/posts/safe-gost-tunnel/ -&lt;p&gt;Gost 是 GO 语言实现的安全隧道，但是其默认 TLS 自签证书并不安全，参考这篇文章：&lt;a href=&#34;https://iamddch.com.cn/2020/05/23/WhyGostTlsNotSafe/&#34;&gt;为什么Gost TLS隧道的默认配置不安全&lt;/a&gt;，本篇博文记录如何正确搭建 Relay over wss 隧道，并将其转发到服务器上的 Cloudflare Warp 代理。&lt;/p&gt;
+&lt;h2 id=&#34;安装-certbot&#34;&gt;安装 certbot&lt;/h2&gt;
+&lt;p&gt;acme.sh 太麻烦了，这里用 certbot。我的系统是 Debian，其他系统可以查看官方文档介绍的安装方法。这里注意域名需要完整域名，同时&lt;strong&gt;要把防火墙的 80 端口打开用于认证。&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt install cerbot &lt;span style=&#34;color:#75715e&#34;&gt;# 安装&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo certbot certonly -d &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;lt;你的网站域名&amp;gt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# 生成证书&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo ls /etc/letsencrypt/live/&amp;lt;你的网站域名&amp;gt; &lt;span style=&#34;color:#75715e&#34;&gt;# 看看成功没&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;配置-warp&#34;&gt;配置 warp&lt;/h2&gt;
+&lt;p&gt;这里就不用那些乱七八糟的第三方客户端了，用官方的 warp-cli，warp+ 密钥可以自己找，网上有很多。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;warp-cli register &lt;span style=&#34;color:#75715e&#34;&gt;# 注册&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;warp-cli set-mode proxy &lt;span style=&#34;color:#75715e&#34;&gt;# 设置代理模式&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;warp-cli set-lisence &amp;lt;你的 WARP 密钥&amp;gt; &lt;span style=&#34;color:#75715e&#34;&gt;# 设置密钥&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;warp-cli set-proxy-port &lt;span style=&#34;color:#ae81ff&#34;&gt;7865&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# 设置代理端口&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;warp-cli connect &lt;span style=&#34;color:#75715e&#34;&gt;# 连接到 Warp&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;配置-gost&#34;&gt;配置 gost&lt;/h2&gt;
+&lt;p&gt;随便找个地方放 gost，配置文件如下。我这里用 53 端口连接，转发到 7865 端口上的 socks 代理。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;services&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;- &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;service-0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;addr&lt;/span&gt;: :&lt;span style=&#34;color:#ae81ff&#34;&gt;53&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;handler&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#f92672&#34;&gt;type&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;relay&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#f92672&#34;&gt;auth&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#f92672&#34;&gt;username&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;&amp;lt;配置用户名称&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#f92672&#34;&gt;password&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;&amp;lt;配置连接密码&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#f92672&#34;&gt;chain&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;chain-0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;listener&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#f92672&#34;&gt;type&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;wss&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#f92672&#34;&gt;tls&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#f92672&#34;&gt;certFile&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/etc/letsencrypt/live/&amp;lt;你的网站域名&amp;gt;/fullchain.pem&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#f92672&#34;&gt;keyFile&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/etc/letsencrypt/live/&amp;lt;你的网站域名&amp;gt;/private.pem&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;chains&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;- &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;chain-0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;hops&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;node-0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#f92672&#34;&gt;addr&lt;/span&gt;: :&lt;span style=&#34;color:#ae81ff&#34;&gt;7865&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#f92672&#34;&gt;connector&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#f92672&#34;&gt;type&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;socks&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#f92672&#34;&gt;dialer&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#f92672&#34;&gt;type&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;tcp&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;把文件保存为 &lt;code&gt;gost.yml&lt;/code&gt;，然后在当前目录运行 &lt;code&gt;gost&lt;/code&gt;，会自动检索配置文件。&lt;/p&gt;
+&lt;h2 id=&#34;连接到隧道&#34;&gt;连接到隧道&lt;/h2&gt;
+&lt;p&gt;客户端配置如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;services&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;- &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;service-0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;addr&lt;/span&gt;: :&lt;span style=&#34;color:#ae81ff&#34;&gt;2333&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;handler&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;type&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;socks&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;chain&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;chain-0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;chains&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;- &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;chain-0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;hops&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;hop-0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;nodes&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;node-0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;addr&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;&amp;lt;你的服务器域名或ip&amp;gt;:53&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;connector&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;type&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;relay&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;auth&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;username&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;&amp;lt;配置用户名称&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;password&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;&amp;lt;配置连接密码&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;dialer&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;type&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;wss&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;保存为&lt;code&gt;gost.yml&lt;/code&gt;，同目录运行 &lt;code&gt;gost&lt;/code&gt; 即可连接，socks 代理地址 &lt;code&gt;127.0.0.1&lt;/code&gt;，端口 &lt;code&gt;2333&lt;/code&gt;。&lt;/p&gt;
+- http://localhost:1313/blog/posts/safe-gost-tunnel/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>寄</title>
+        <link>http://localhost:1313/blog/posts/fucked-up-life/</link>
+        <pubDate>Sun, 12 May 2024 19:56:43 +0800</pubDate>
+        
+        <guid>http://localhost:1313/blog/posts/fucked-up-life/</guid>
+        <description>池塘 http://localhost:1313/blog/posts/fucked-up-life/ -&lt;p&gt;早上给小陈送完听力资料，搭公交回学校已经是下午两点了。肚子这几天一直很疼，早上也没吃饭，疼得不想吃。想学一会 C++ 又实在集中不了注意力，遂躺回床上睡觉。&lt;/p&gt;
+&lt;p&gt;醒来已经是下午五点了，群里在讨论明年涨学费的事儿，从 1.9w 涨到 2.4w。唉，别想。又还能怎么办呢。&lt;/p&gt;
+&lt;p&gt;吃完饭欲求未满，又买了个汉堡吃，这几天吃得东西一直很杂，也很不规律，大概是为啥肚子疼吧。时间过得好快，又一个学期要过去了，前段时间学的 C++ 又快忘光了，不得不重新捡起来，我最开始是为啥要学来着？哦，是为了改 KWin.&lt;/p&gt;
+&lt;p&gt;这段时间在忙活开源之夏的事情，如果能入选该多好。暑假不知道去不去 hvv，估计是不会去了，在家啃老，哈哈哈。&lt;/p&gt;
+&lt;p&gt;感觉到自己无能为力的时候只能不去思考这些事情，活在当下，又或者是肠道菌群在作祟。&lt;/p&gt;
+- http://localhost:1313/blog/posts/fucked-up-life/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>逃避深刻</title>
+        <link>http://localhost:1313/blog/posts/escape-from-reality/</link>
+        <pubDate>Fri, 10 May 2024 23:54:58 +0800</pubDate>
+        
+        <guid>http://localhost:1313/blog/posts/escape-from-reality/</guid>
+        <description>池塘 http://localhost:1313/blog/posts/escape-from-reality/ -&lt;p&gt;最近河南说唱之神的《工厂》很火，别怀疑，这个歌手就叫做“河南说唱之神”。和之前万能青年旅店火的点差不多：歌好听、抨击社会现象，所谓的”走心“。看到更多年轻人开始关心这些东西，我很高兴，但又感觉身在其中事不由己，毕竟经济下行的年代才会有这么多人开始重拾”人文关怀“，经济好的时候大家都听 TFBoys 呢。&lt;/p&gt;
+&lt;p&gt;我从小就挺关心社会，最开始是猎奇，后来慢慢长大，才意识到这些东西和我也脱不开干系；认识到这点之后我反而想闭嘴了，天天那么苦大仇深干啥呢？得做好自己，世界才会变得更好一点。&lt;/p&gt;
+&lt;p&gt;坦白说，也有可能是我现在的日子太舒服了，网上有个说法：”屁股决定脑袋“。我没感觉像读中学的时候被老师”压迫“、被领导”压迫“，也就没那么关心别人。热心肠多少有点假大空，太多的事情我管不了，看着又难受，干脆不看，开心点。&lt;/p&gt;
+&lt;p&gt;朋友们都还在念中学，因为成绩不好去复读了，当然读得很痛苦。中国的中学教育正在越来越魔怔，这种魔怔现在传染到小学、幼儿园，甚至大学。继续这样下去，我深为国家未来而担忧，毕竟一个人在他的整个少年时期都呆在堪比奥斯维辛的地方念书、生活，难免培养出一些精神变态。&lt;/p&gt;
+&lt;p&gt;人是好了伤疤忘了痛的。等到我有了孩子，我能不能共情我的孩子？就像我的父母包容我一样。我不知道，也不想想。&lt;/p&gt;
+&lt;p&gt;这些年我也被洗脑太多，虽然自诩”清醒“，但短视、功利、焦虑，这些多年受训留下的品质，还是在我内心占据了极大的位置。我应该学会多包容别人，学会更好地沟通，人类毕竟是社会动物，世界也不只有代码。&lt;/p&gt;
+&lt;p&gt;我前段时间特喜欢听花儿乐队的《幸福的旁边》，那是大张伟早期做流行朋克时期的作品，够悦耳够带劲儿，把中学生想的那些事儿都说出来了。后来他不做类似的东西了，在”逃避深刻“。直面深刻真的太困难了，多少人受不了就崩溃了？&lt;/p&gt;
+&lt;p&gt;我现在很少对新闻发表看法，唯一的看法是没有重要的新闻了，谁死了、谁又升官了、谁和谁又打起来了，听了这么多我脑袋都是花的。有时候我会觉得体制有问题，不是说哪个国家的体制，而是这个世界运行的方式，不过我也说不出所以然来，于是就这么埋头活着。&lt;/p&gt;
+&lt;p&gt;大陆富士康的工人在为美国的苹果公司生产手机，这不只是某一个国家的问题。&lt;/p&gt;
+&lt;p&gt;我只是没有勇气&amp;hellip;.&lt;/p&gt;
+- http://localhost:1313/blog/posts/escape-from-reality/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>在 Pixelbook Go 上安装 AOSC 的坑 feat.我的碎碎念</title>
+        <link>http://localhost:1313/blog/posts/pixelbook-go-with-aosc/</link>
+        <pubDate>Mon, 29 Apr 2024 00:24:03 +0800</pubDate>
+        
+        <guid>http://localhost:1313/blog/posts/pixelbook-go-with-aosc/</guid>
+        <description>池塘 http://localhost:1313/blog/posts/pixelbook-go-with-aosc/ -&lt;p&gt;这标题好长（）&lt;/p&gt;
+&lt;h2 id=&#34;安装程序分区卡住&#34;&gt;安装程序分区卡住&lt;/h2&gt;
+&lt;p&gt;目前安装程序 Deploykit 会在清除磁盘后报错，重启再进安装镜像方可解决这个问题。&lt;/p&gt;
+&lt;h2 id=&#34;修复声音键盘映射&#34;&gt;修复声音/键盘映射&lt;/h2&gt;
+&lt;p&gt;参考： &lt;a href=&#34;https://github.com/WeirdTreeThing/chromebook-linux-audio&#34;&gt;WeirdTreeThing/chromebook-linux-audio&lt;/a&gt; 和 &lt;a href=&#34;https://github.com/WeirdTreeThing/cros-keyboard-map&#34;&gt;WeirdTreeThing/cros-keyboard-map&lt;/a&gt;
+AOSC OS 的兼容性还是不错的，跑的脚本没有经过更改，直接依照指导运行就能生效。&lt;/p&gt;
+&lt;h2 id=&#34;修复-assistant-键&#34;&gt;修复 Assistant 键&lt;/h2&gt;
+&lt;p&gt;上面的脚本不能修复谷歌助理键，就是普通笔记本上 Meta 键位置上的按键，查看 dmesg 可以发现是内核不知道该怎么映射这个键，很简单，用 &lt;code&gt;sudo showkey&lt;/code&gt; ，按下你需要映射到的键位的同时，你应该就能看到对应的键位值，然后使用 &lt;code&gt;sudo setkeycodes e058 &amp;lt;你需要的键位值&amp;gt;&lt;/code&gt; 即可完成映射。&lt;/p&gt;
+&lt;h2 id=&#34;后记&#34;&gt;后记&lt;/h2&gt;
+&lt;p&gt;其实很早之前就听闻 AOSC, 只不过那时我玩 Linux 还不熟练，并不是目标用户。&lt;/p&gt;
+&lt;p&gt;现在来看，AOSC 的设计哲学和 Arch Linux 颇有几分相似，贴近上游、不过多给自己添戏的作风与国内一众发行版迥异，其搭载的 &lt;code&gt;oma&lt;/code&gt; 包管理界面也确实让 &lt;code&gt;apt/dpkg&lt;/code&gt; 的使用变得更加轻松。
+唯一的不足体现在 &lt;code&gt;depolykit&lt;/code&gt; 暂时还不是很完备，没有多语言支持、报错信息甚至会被挡住，不过这些问题无伤大雅。&lt;/p&gt;
+&lt;p&gt;作为一个小众发行版，安同将近十年的连续开发和类似于国外主流发行版的社区氛围，都体现了开发团队的确认真在做一个“有趣”、“好用”的系统。&lt;/p&gt;
+&lt;p&gt;希望安同能在龙架构慢慢被爱好者发掘、把玩的时代背景下，发展出一个更有生命力的社区；
+另外今年开源之夏似乎有 AOSC 的项目，不过不知道  if thers&amp;rsquo;s anything I can help&amp;hellip;. 七月份有 AOSCC, 很难得在国内能聚集一帮喜欢玩 Linux 的人，或许我们？七月见！&lt;/p&gt;
+- http://localhost:1313/blog/posts/pixelbook-go-with-aosc/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>试着写一个更好的校园网认证客户端</title>
+        <link>http://localhost:1313/blog/posts/attempting-implement-better-campus-net-client/</link>
+        <pubDate>Sun, 21 Apr 2024 00:02:42 +0800</pubDate>
+        
+        <guid>http://localhost:1313/blog/posts/attempting-implement-better-campus-net-client/</guid>
+        <description>池塘 http://localhost:1313/blog/posts/attempting-implement-better-campus-net-client/ -&lt;p&gt;我一直在用 bitdust 的 &lt;a href=&#34;https://github.com/bitdust/njit8021xclient&#34;&gt;njit8021xclient&lt;/a&gt;，除了一开始的反编译过程令我痛苦无比，后面的使用非常非常顺畅，基本上没出过什么大岔子。校园网的计费系统和行为管理系统是分开的，所以上学期几次被封也不是认证的锅。&lt;/p&gt;
+&lt;p&gt;这个开源的新华三 802.1X 客户端经历了十几年松散的开发，从代码上来看比较丑陋，不过用着没问题，我也就没想着折腾它。而希望能重写一个更好的客户端的念头来源于我最近的 C++ 学习，光看教程十分枯燥，我想着多少写点有用的东西。&lt;/p&gt;
+&lt;p&gt;我没有接触过网络编程，对 C/C++ 体系里的各种工具也不是很适应，CMake 咋用、各种库咋调都不是很清楚，更要命的是，我读过前述项目代码之后发现：它已经十分简洁了，虽然丑陋，但代码足够简单和清晰，并且基本上算是零依赖：除了 libpcap 和 openssl。不过这也是让我有点疑惑的点：它既调用了 openssl, 又自己实现了一些相关的功能，大概是十几年间接续开发的历史遗留问题吧。如果我用 C++ 重写，说不定整出来一个性能和体积都不如这个版本的&lt;del&gt;垃圾&lt;/del&gt;东西&amp;hellip;&lt;/p&gt;
+&lt;p&gt;现在似乎没有多少高校使用新华三的 802.1X 认证了，即使做出来估计也没多少人会用，何况这类客户端绕不开对原版客户端的二进制逆向，使用门槛比较高，唯一能寄希望的就是某一位使用者能把他环境里的字典数据逆向出来，分享给同环境（单位、学校）的人用。&lt;/p&gt;
+&lt;p&gt;或许等我学得再深入些，能开发一个自动 crack 原版客户端、提取字典的程序？哈哈。&lt;/p&gt;
+&lt;p&gt;我目前的工作集中在理解协议设计上，整理好认证包和认证流程之后，就可以试着熟悉 C++ 生态（构建系统、包管理）了。&lt;/p&gt;
+&lt;p&gt;说是学业繁重，其实有时候希望学校少开点课程该多好，因为就算开这么些课也是考试前抱佛脚，平常不学习多少有点惶惶不可终日，但是又不想学习，只想干自己的事情。&lt;/p&gt;
+&lt;p&gt;至于自己的事情是啥？估计就是这些破事水和重复造轮子的项目吧。&lt;/p&gt;
+&lt;p&gt;ԅ(¯﹃¯ԅ)&lt;/p&gt;
+&lt;p&gt;悄悄在这&lt;br&gt;
+卖个萌&lt;br&gt;
+应该&lt;br&gt;
+不会有人&lt;/p&gt;
+&lt;p&gt;发现&amp;hellip;&lt;/p&gt;
+- http://localhost:1313/blog/posts/attempting-implement-better-campus-net-client/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Another Boring Hello World Post</title>
+        <link>http://localhost:1313/blog/posts/hello-world/</link>
+        <pubDate>Tue, 16 Apr 2024 13:05:13 +0800</pubDate>
+        
+        <guid>http://localhost:1313/blog/posts/hello-world/</guid>
+        <description>池塘 http://localhost:1313/blog/posts/hello-world/ -&lt;p&gt;很多事情该说不说，最后烂在肚子里就不想说了，说实话，这么些年下来
+我的表达欲慢慢在降低。我说或者不说又有什么用呢？说得太多，
+反而容易被识破、戳穿。&lt;/p&gt;
+&lt;p&gt;为什么我连自我表达都开始焦虑？&lt;/p&gt;
+&lt;p&gt;社交媒体的侵略性太强，在荧屏面前，好像你不得不点赞、转发、评论，
+才能显得你在乎某个人。&lt;/p&gt;
+&lt;p&gt;我觉得这样挺没劲的。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;讨好自己，
+现实逃避。&lt;br&gt;
+不知不觉，&lt;br&gt;
+抽离。&lt;br&gt;
+漫天的是非，
+做我的真理。&lt;br&gt;
+一团和气，&lt;br&gt;
+处事道理。&lt;br&gt;
+遮遮掩掩——&lt;br&gt;
+脸皮&lt;br&gt;
+其实都自卑&amp;hellip;&lt;br&gt;
+其实都自欺&amp;hellip;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我懒得被关注，只想引人注意，所以我还是写写博客吧。&lt;/p&gt;
+- http://localhost:1313/blog/posts/hello-world/ - </description>
+        </item>
+    
+    
+  </channel>
+</rss> 
