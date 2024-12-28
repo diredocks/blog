@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on ike</title>
+    <link>https://diredocks.github.io/blog/content/</link>
+    <description>Recent content in Home on ike</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 01 Jan 2023 08:00:00 -0700</lastBuildDate>
+    <atom:link href="https://diredocks.github.io/blog/content/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>关于</title>
+      <link>https://diredocks.github.io/blog/content/about/</link>
+      <pubDate>Sun, 01 Jan 2023 08:00:00 -0700</pubDate>
+      <guid>https://diredocks.github.io/blog/content/about/</guid>
+      <description>&lt;p&gt;I enjoy breakcore and indie music, and my two favorite bands are Radiohead and My Little Airport.&lt;br&gt;&#xA;My idols are manateelazycat and Richard Stallman.&lt;/p&gt;&#xA;&lt;p&gt;I mostly program in Python, and my main device runs NixOS with the KDE desktop environment.&lt;br&gt;&#xA;&lt;del&gt;I am currently learning C++ on &lt;a href=&#34;https://www.learncpp.com/&#34;&gt;learncpp.com&lt;/a&gt;, and my plan for 2024 is to become a KDE Contributor and improve the touchpad experience on KDE.&lt;/del&gt;&lt;/p&gt;&#xA;&lt;p&gt;I often feel nostalgic about the past.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
