@@ -6,8 +6,15 @@
     <description>Recent content in Home on ike</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 16 Dec 2024 21:06:23 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jan 2025 23:40:09 +0800</lastBuildDate>
     <atom:link href="https://diredocks.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2024</title>
+      <link>https://diredocks.github.io/blog/posts/2024/</link>
+      <pubDate>Tue, 07 Jan 2025 23:40:09 +0800</pubDate>
+      <guid>https://diredocks.github.io/blog/posts/2024/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;这一年我都干啥了？&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;一月&#34;&gt;一月&lt;/h2&gt;&#xA;&lt;p&gt;大一下结束了，寒假，学了一点 Haskell, 后来没怎么用就忘了，见朋友。&lt;/p&gt;&#xA;&lt;h2 id=&#34;三月&#34;&gt;三月&lt;/h2&gt;&#xA;&lt;p&gt;认识一个很有意思的学长，俩人线下面基吃饭了，聊得还不错。有点想快点毕业工作挣钱。聊完了感觉那时候学校氛围特别好，现在多少有点冷清了，系里也没什么和计算机相关的活动。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>计算机网络复习</title>
       <link>https://diredocks.github.io/blog/posts/review-computer-networking/</link>
