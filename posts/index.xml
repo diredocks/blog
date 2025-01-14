@@ -6,8 +6,15 @@
     <description>Recent content in 文章 on ike</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 11 Jan 2025 13:35:59 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jan 2025 13:12:53 +0800</lastBuildDate>
     <atom:link href="https://diredocks.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>为 Armbian 配置只读 rootfs</title>
+      <link>https://diredocks.github.io/blog/posts/overlayfs-on-armbian/</link>
+      <pubDate>Tue, 14 Jan 2025 13:12:53 +0800</pubDate>
+      <guid>https://diredocks.github.io/blog/posts/overlayfs-on-armbian/</guid>
+      <description>&lt;p&gt;本文是 &lt;a href=&#34;https://forum.armbian.com/topic/19870-how-to-use-with-write-protected-filesystems-todays/&#34;&gt;How to use with write protected filesystems todays? - forum.armbian.com&lt;/a&gt; 的翻译。&lt;/p&gt;&#xA;&lt;p&gt;Armbian 是为单板计算机和嵌入式设备优化的 Linux 发行版，我最近在家里放了一块 tpm312, 作为 VPN 网关，方便我在外访问家里的网络。&lt;/p&gt;&#xA;&lt;p&gt;这块板子不支持从 SD 卡和 U 盘启动，为了尽可能减小读写对 emmc 的损耗，我选择将 rootfs 配置成只读。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>常识备忘</title>
       <link>https://diredocks.github.io/blog/posts/you-need-to-know/</link>
