@@ -6,8 +6,15 @@
     <description>Recent content in Home on 池塘</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 14 Jan 2025 13:12:53 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 31 Jan 2025 15:59:34 +0800</lastBuildDate>
     <atom:link href="https://diredocks.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>我去 2012 年</title>
+      <link>https://diredocks.github.io/blog/posts/back-to-2012/</link>
+      <pubDate>Fri, 31 Jan 2025 15:59:34 +0800</pubDate>
+      <guid>https://diredocks.github.io/blog/posts/back-to-2012/</guid>
+      <description>&lt;p&gt;2012 年已经是 13 年之前了，生肖都过了一轮不止。我其实很欣赏当时的网站设计，好像 Web 在那时发展到了一个顶点，人们正在从世界末日的谣言中缓过劲来，在 Flash 和 HTML 5 的间隙中悬浮。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>为 Armbian 配置只读 rootfs</title>
       <link>https://diredocks.github.io/blog/posts/overlayfs-on-armbian/</link>
