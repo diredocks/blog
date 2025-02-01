@@ -1,159 +1,338 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>文章 on 池塘</title>
-    <link>https://diredocks.github.io/blog/posts/</link>
-    <description>Recent content in 文章 on 池塘</description>
-    <generator>Hugo</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Sat, 01 Feb 2025 19:38:42 +0800</lastBuildDate>
-    <atom:link href="https://diredocks.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>我是怎么在静态博客里插图的？</title>
-      <link>https://diredocks.github.io/blog/posts/images-in-hugo/</link>
-      <pubDate>Sat, 01 Feb 2025 19:38:42 +0800</pubDate>
-      <guid>https://diredocks.github.io/blog/posts/images-in-hugo/</guid>
-      <description>&lt;p&gt;在静态博客里插图一直是个问题，常用的解决方案是第三方/自建图床，但是这些解决方案有以下缺点：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;不知道这个第三方能用爱发电到什么时候，万一突然倒闭了数据很难找回来&lt;/li&gt;&#xA;&lt;li&gt;某些白嫖图床（比方说大眼）有可能突然把外链砍了，到时候整个博客一片“此图片禁止外部引用”&lt;/li&gt;&#xA;&lt;li&gt;自建可能会被某些杂种刷流量刷爆 CDN 或者 OSS 账单，就算设了配额也麻烦&lt;/li&gt;&#xA;&lt;li&gt;也有可能某天域名忘记续费了，外链全部挂掉，等到回头记得续费的时候已经变成天价了&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;因为这些破事，我就一直不敢往文章里插图，不过最近闲着没事，便开始着手解决这个问题。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>我去 2012 年</title>
-      <link>https://diredocks.github.io/blog/posts/back-to-2012/</link>
-      <pubDate>Fri, 31 Jan 2025 15:59:34 +0800</pubDate>
-      <guid>https://diredocks.github.io/blog/posts/back-to-2012/</guid>
-      <description>&lt;p&gt;2012 年已经是 13 年之前了，生肖都过了一轮不止。我其实很欣赏当时的网站设计，好像 Web 在那时发展到了一个顶点，人们正在从世界末日的谣言中缓过劲来，在 Flash 和 HTML 5 的间隙中悬浮。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>为 Armbian 配置只读 rootfs</title>
-      <link>https://diredocks.github.io/blog/posts/overlayfs-on-armbian/</link>
-      <pubDate>Tue, 14 Jan 2025 13:12:53 +0800</pubDate>
-      <guid>https://diredocks.github.io/blog/posts/overlayfs-on-armbian/</guid>
-      <description>&lt;p&gt;本文是 &lt;a href=&#34;https://forum.armbian.com/topic/19870-how-to-use-with-write-protected-filesystems-todays/&#34;&gt;How to use with write protected filesystems todays? - forum.armbian.com&lt;/a&gt; 的翻译。&lt;/p&gt;&#xA;&lt;p&gt;Armbian 是为单板计算机和嵌入式设备优化的 Linux 发行版，我最近在家里放了一块 tpm312, 作为 VPN 网关，方便我在外访问家里的网络。&lt;/p&gt;&#xA;&lt;p&gt;这块板子不支持从 SD 卡和 U 盘启动，为了尽可能减小读写对 emmc 的损耗，我选择将 rootfs 配置成只读。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>常识备忘</title>
-      <link>https://diredocks.github.io/blog/posts/you-need-to-know/</link>
-      <pubDate>Sat, 11 Jan 2025 13:35:59 +0800</pubDate>
-      <guid>https://diredocks.github.io/blog/posts/you-need-to-know/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;生活小窍门&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;这是我目前为止需要提醒自己注意的生活常识，可能不适用于所有人，仅仅作为备忘提醒自己。&lt;/p&gt;&#xA;&lt;h2 id=&#34;起居&#34;&gt;起居&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;东西坏了就丢掉，一次性的东西就是一次性的，别攒着，否则结果就是垃圾堆积成山。&lt;/li&gt;&#xA;&lt;li&gt;定期更换牙刷、毛巾和水杯，防止细菌滋生。不舒服两天之你不好就去看医生吃药，别自己忍着。&lt;/li&gt;&#xA;&lt;li&gt;想去学什么就去学，饿了就吃。&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;社交&#34;&gt;社交&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;远离能引发强烈情绪的人和群体，少回忆以前，包括让人嫉妒和仇恨的。&lt;/li&gt;&#xA;&lt;li&gt;不要被老一辈的观念束缚，自己思考和选择合适自己的交友范围和社交方式。内向也没什么不好的，不要试图获得所有人的理解，也不要以己度人。&lt;/li&gt;&#xA;&lt;li&gt;对长辈诚实些，（和他们沟通的时候）多站在他们的角度思考问题，才能更好理解他们的想法。&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;技术&#34;&gt;技术&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;刷论坛不能让你得到知识，如果你只会被动接受信息而不会向外输出自己的想法，那么社交媒体或许不是个好地方。&lt;/li&gt;&#xA;&lt;li&gt;读书和手册就是枯燥的， 但遗憾的是这或许是必要的，否则一写项目你甚至不知道自己“不知道什么”。&lt;/li&gt;&#xA;&lt;li&gt;技术的增长需要积累，多写代码多实现点子，就算烂尾也没关系：你永远不可能比那之后更不了解你研究的东西了。&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;结语&#34;&gt;结语&lt;/h2&gt;&#xA;&lt;p&gt;爱自己才会有人爱你。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>2024</title>
-      <link>https://diredocks.github.io/blog/posts/2024/</link>
-      <pubDate>Tue, 07 Jan 2025 23:40:09 +0800</pubDate>
-      <guid>https://diredocks.github.io/blog/posts/2024/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;这一年我都干啥了？&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;一月&#34;&gt;一月&lt;/h2&gt;&#xA;&lt;p&gt;大一下结束了，寒假，学了一点 Haskell, 后来没怎么用就忘了，见朋友。&lt;/p&gt;&#xA;&lt;h2 id=&#34;三月&#34;&gt;三月&lt;/h2&gt;&#xA;&lt;p&gt;认识一个很有意思的学长，俩人线下面基吃饭了，聊得还不错。有点想快点毕业工作挣钱。聊完了感觉那时候学校氛围特别好，现在多少有点冷清了，系里也没什么和计算机相关的活动。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>计算机网络复习</title>
-      <link>https://diredocks.github.io/blog/posts/review-computer-networking/</link>
-      <pubDate>Mon, 16 Dec 2024 21:06:23 +0800</pubDate>
-      <guid>https://diredocks.github.io/blog/posts/review-computer-networking/</guid>
-      <description>&lt;h2 id=&#34;题目类型&#34;&gt;题目类型&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;类型&lt;/th&gt;&#xA;          &lt;th&gt;分数&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;单选&lt;/td&gt;&#xA;          &lt;td&gt;15&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;填空&lt;/td&gt;&#xA;          &lt;td&gt;15&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;判断&lt;/td&gt;&#xA;          &lt;td&gt;15&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;改错&lt;/td&gt;&#xA;          &lt;td&gt;15&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;简答&lt;/td&gt;&#xA;          &lt;td&gt;15&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;计算&lt;/td&gt;&#xA;          &lt;td&gt;30&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;体系架构p31-图1-16&#34;&gt;体系架构（P31 图1-16）&lt;/h2&gt;&#xA;&lt;h3 id=&#34;osi-7层协议&#34;&gt;OSI 7层协议&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;应用层&lt;/li&gt;&#xA;&lt;li&gt;表示层&lt;/li&gt;&#xA;&lt;li&gt;会话层&lt;/li&gt;&#xA;&lt;li&gt;运输层&lt;/li&gt;&#xA;&lt;li&gt;网络层&lt;/li&gt;&#xA;&lt;li&gt;数据链路层&lt;/li&gt;&#xA;&lt;li&gt;物理层&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h3 id=&#34;tcpip-4层协议&#34;&gt;TCP/IP 4层协议&lt;/h3&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;层次&lt;/th&gt;&#xA;          &lt;th&gt;功能与示例协议&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;应用层&lt;/td&gt;&#xA;          &lt;td&gt;HTTP, SMTP, DNS&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;运输层&lt;/td&gt;&#xA;          &lt;td&gt;TCP, UDP&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;网际层&lt;/td&gt;&#xA;          &lt;td&gt;IP&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;链路层&lt;/td&gt;&#xA;          &lt;td&gt;数据链路和物理层合并&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h3 id=&#34;教材-5层协议&#34;&gt;教材 5层协议&lt;/h3&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;层次&lt;/th&gt;&#xA;          &lt;th&gt;功能&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;应用层&lt;/td&gt;&#xA;          &lt;td&gt;提供特定网络服务&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;运输层&lt;/td&gt;&#xA;          &lt;td&gt;通用进程通信&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;网络层&lt;/td&gt;&#xA;          &lt;td&gt;IP数据报、路由器&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;数据链路层&lt;/td&gt;&#xA;          &lt;td&gt;帧传输、差错检测、纠错&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;物理层&lt;/td&gt;&#xA;          &lt;td&gt;比特传输、电气特性&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;扩展以太网&#34;&gt;扩展以太网&lt;/h2&gt;&#xA;&lt;h3 id=&#34;物理层集线器p100&#34;&gt;物理层：集线器（P100）&lt;/h3&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;&lt;strong&gt;优点&lt;/strong&gt;&lt;/th&gt;&#xA;          &lt;th&gt;&lt;strong&gt;缺点&lt;/strong&gt;&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;扩大以太网覆盖范围&lt;/td&gt;&#xA;          &lt;td&gt;碰撞域变大，通信易受碰撞影响&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;实现跨系通信&lt;/td&gt;&#xA;          &lt;td&gt;最大速率受限于最慢连接的设备&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h3 id=&#34;数据链路层交换机网桥p101&#34;&gt;数据链路层：交换机（网桥）（P101）&lt;/h3&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;&lt;strong&gt;优点&lt;/strong&gt;&lt;/th&gt;&#xA;          &lt;th&gt;&lt;strong&gt;缺点&lt;/strong&gt;&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;扩大物理范围、提高可靠性&lt;/td&gt;&#xA;          &lt;td&gt;存储转发增加了时延&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;可互连不同物理层、不同 MAC 子层和不同速率（如 10 Mb/s 和 100 Mb/s 以太网）的局域网&lt;/td&gt;&#xA;          &lt;td&gt;网桥只适合于用户数不太多 (不超过几百个) 和通信量不太大的局域网，否则有时还会因传播过多的广播信息而产生网络拥塞，即广播风暴&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;常见拓扑的优缺点&#34;&gt;常见拓扑的优缺点&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;&lt;strong&gt;拓扑&lt;/strong&gt;&lt;/th&gt;&#xA;          &lt;th&gt;&lt;strong&gt;优点&lt;/strong&gt;&lt;/th&gt;&#xA;          &lt;th&gt;&lt;strong&gt;缺点&lt;/strong&gt;&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;星形拓扑&lt;/td&gt;&#xA;          &lt;td&gt;结构简单，便于控制与扩展；故障诊断易；各节点独立&lt;/td&gt;&#xA;          &lt;td&gt;中央节点负担重，易成瓶颈；电缆需求多，安装复杂&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;总线型拓扑&lt;/td&gt;&#xA;          &lt;td&gt;结构简单，电缆需求少&lt;/td&gt;&#xA;          &lt;td&gt;传输距离有限；故障诊断困难；分布式协议难以保证实时传送&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;环形拓扑&lt;/td&gt;&#xA;          &lt;td&gt;电缆长度短，易扩展；可用光纤&lt;/td&gt;&#xA;          &lt;td&gt;单点故障导致全网失效；故障检查难；负载轻时信道利用率低&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;树形拓扑&lt;/td&gt;&#xA;          &lt;td&gt;易于扩展；故障隔离较容易&lt;/td&gt;&#xA;          &lt;td&gt;根节点依赖性大&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;虚电路服务-vs-数据报服务&#34;&gt;虚电路服务 vs 数据报服务&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;&lt;strong&gt;特性&lt;/strong&gt;&lt;/th&gt;&#xA;          &lt;th&gt;&lt;strong&gt;虚电路服务&lt;/strong&gt;&lt;/th&gt;&#xA;          &lt;th&gt;&lt;strong&gt;数据报服务&lt;/strong&gt;&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;可靠性&lt;/td&gt;&#xA;          &lt;td&gt;网络保证&lt;/td&gt;&#xA;          &lt;td&gt;用户主机保证&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;是否建立连接&lt;/td&gt;&#xA;          &lt;td&gt;是&lt;/td&gt;&#xA;          &lt;td&gt;否&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;地址使用&lt;/td&gt;&#xA;          &lt;td&gt;连接建立时使用终点地址&lt;/td&gt;&#xA;          &lt;td&gt;每个分组都需携带完整终点地址&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;路由&lt;/td&gt;&#xA;          &lt;td&gt;同一条虚电路的分组按同一路由转发&lt;/td&gt;&#xA;          &lt;td&gt;每个分组独立查表转发&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;故障处理&lt;/td&gt;&#xA;          &lt;td&gt;故障节点影响所有虚电路&lt;/td&gt;&#xA;          &lt;td&gt;路由变化，部分包可能丢失&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;顺序&lt;/td&gt;&#xA;          &lt;td&gt;按顺序接收&lt;/td&gt;&#xA;          &lt;td&gt;不一定按顺序接收&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;rip工作的特点&#34;&gt;RIP工作的特点&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;仅与相邻路由器交换信息&lt;/li&gt;&#xA;&lt;li&gt;交换本路由器的路由表&lt;/li&gt;&#xA;&lt;li&gt;按固定时间间隔进行交换&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;传输层两大协议的特点&#34;&gt;传输层两大协议的特点&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;&lt;strong&gt;特性&lt;/strong&gt;&lt;/th&gt;&#xA;          &lt;th&gt;&lt;strong&gt;TCP&lt;/strong&gt;&lt;/th&gt;&#xA;          &lt;th&gt;&lt;strong&gt;UDP&lt;/strong&gt;&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;连接&lt;/td&gt;&#xA;          &lt;td&gt;是&lt;/td&gt;&#xA;          &lt;td&gt;否&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;通信方式&lt;/td&gt;&#xA;          &lt;td&gt;点对点&lt;/td&gt;&#xA;          &lt;td&gt;支持多对多、一对多、一对一&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;可靠性&lt;/td&gt;&#xA;          &lt;td&gt;可靠交付&lt;/td&gt;&#xA;          &lt;td&gt;尽最大可能交付&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;传输单位&lt;/td&gt;&#xA;          &lt;td&gt;面向字节流&lt;/td&gt;&#xA;          &lt;td&gt;面向报文&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;拥塞控制&lt;/td&gt;&#xA;          &lt;td&gt;有&lt;/td&gt;&#xA;          &lt;td&gt;无&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;首部开销&lt;/td&gt;&#xA;          &lt;td&gt;较大&lt;/td&gt;&#xA;          &lt;td&gt;较小&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;大题&#34;&gt;大题&lt;/h2&gt;&#xA;&lt;h3 id=&#34;编码方式&#34;&gt;编码方式&lt;/h3&gt;&#xA;&lt;p&gt;课本 P45&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>给 Nixpkgs 里的软件打上你自己的补丁</title>
-      <link>https://diredocks.github.io/blog/posts/patch-nixpkg-overlay/</link>
-      <pubDate>Tue, 26 Nov 2024 21:25:12 +0800</pubDate>
-      <guid>https://diredocks.github.io/blog/posts/patch-nixpkg-overlay/</guid>
-      <description>&lt;p&gt;我最近给 KWin 加上了触控板三指水平滑动切换窗口的功能，很不幸由于和目前的手势分配有冲突，合并请求被搁置了。但是咱都有源码了，还能干等着不成？&lt;/p&gt;&#xA;&lt;p&gt;在 ArchLinux 里，给已有的包打上自己的补丁，只需要抄一下官方仓库里的 PKGBUILD，加上补丁，然后自己构建安装即可。在 NixOS 里也是差不多的，用 overlay 覆盖 nixpkgs 里的包，好处是将来的更新无需手动同步版本，因为只是覆盖原有包的某些构建阶段，一劳永逸。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Choose Life</title>
-      <link>https://diredocks.github.io/blog/posts/choose-life/</link>
-      <pubDate>Sat, 05 Oct 2024 23:09:36 +0800</pubDate>
-      <guid>https://diredocks.github.io/blog/posts/choose-life/</guid>
-      <description>&lt;p&gt;We can’t really do much in this day and age, not for regular people—those with just average looks, intelligence, or money. Back when I was in junior high, my biology teacher said birds are constantly on the hunt for food, day and night, without rest. Aren’t we a lot like those little creatures?&lt;/p&gt;&#xA;&lt;p&gt;Building a hobby requires time, money, and attention—resources most of us don’t have in abundance. Losing touch with hobbies shuts down many opportunities for us. We miss out on connecting with a broader social circle, gaining real-life experiences, and truly enjoying life. It paints a pretty pessimistic picture.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Time to Go</title>
-      <link>https://diredocks.github.io/blog/posts/time-to-go/</link>
-      <pubDate>Sat, 28 Sep 2024 18:29:04 +0800</pubDate>
-      <guid>https://diredocks.github.io/blog/posts/time-to-go/</guid>
-      <description>&lt;p&gt;I often find myself reflecting on moments from the past. I know there&amp;rsquo;s always a voice in my head saying, &amp;lsquo;Understanding your past is essential for reaching the future.&amp;rsquo; But let’s be honest: every time I revisit my unfinished projects or failures, all I feel is regret—nothing more.&lt;/p&gt;&#xA;&lt;p&gt;To open your mind means to filter out the noise around you, including echoes from the past. We need to focus on what lies ahead and recognize that we can&amp;rsquo;t change history.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Worn Out</title>
-      <link>https://diredocks.github.io/blog/posts/worn-out/</link>
-      <pubDate>Sat, 28 Sep 2024 18:08:07 +0800</pubDate>
-      <guid>https://diredocks.github.io/blog/posts/worn-out/</guid>
-      <description>&lt;p&gt;Dealing with clueless people is one of the hardest things in life.&lt;/p&gt;&#xA;&lt;p&gt;I actually appreciate the ones who are genuinely clueless but honest about it. At least they&amp;rsquo;re straightforward. But then there are those who pretend to know something, only to manipulate and take advantage of you, like you&amp;rsquo;re disposable.&lt;/p&gt;&#xA;&lt;p&gt;It&amp;rsquo;s disappointing, frustrating, and downright disgusting.&lt;/p&gt;&#xA;&lt;p&gt;I can&amp;rsquo;t stand these people, and I&amp;rsquo;ve decided to do everything I can to distance myself from them.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>至专校园网攻略</title>
-      <link>https://diredocks.github.io/blog/posts/zhicheng-campus-network-guide/</link>
-      <pubDate>Tue, 10 Sep 2024 20:32:06 +0800</pubDate>
-      <guid>https://diredocks.github.io/blog/posts/zhicheng-campus-network-guide/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;日后你惹出祸来，不把师父说出来就行了&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;校园网概况&#34;&gt;校园网概况&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;名义上有三家运营商，但实际出口只有联通和移动两家，2024 年秋季开学以来，电信好像消失了；&lt;/li&gt;&#xA;&lt;li&gt;所以无论你办哪家的校园网，校园网（有线网络、校园热点）的网络质量都是一样的；&lt;/li&gt;&#xA;&lt;li&gt;没有 ipv6；&lt;/li&gt;&#xA;&lt;li&gt;教务处的服务不需要内网，你不买校园网也可以正常选课。&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;认证客户端inyn&#34;&gt;认证客户端：inyn&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;自由不是你想做什么就能做什么，而是你不想做什么就可以不做什么 —— 伊曼努尔·康德&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Nand2UnitTest：从与非门到单元测试</title>
-      <link>https://diredocks.github.io/blog/posts/nand2unittest/</link>
-      <pubDate>Tue, 06 Aug 2024 23:38:20 +0800</pubDate>
-      <guid>https://diredocks.github.io/blog/posts/nand2unittest/</guid>
-      <description>&lt;p&gt;我最近在做一个叫做 &lt;a href=&#34;https://www.nand2tetris.org/&#34;&gt;Nand2Tetris&lt;/a&gt; 的课程，主要是关于计算机组成原理的，从与非们出发，最好搭建出一部完整的计算机系统。&lt;/p&gt;&#xA;&lt;p&gt;这门课分为两个部分，第一部分侧重硬件，从与非门开始，搭建完整的计算机平台（这门课搭建的平台叫 Hack）；第二部分侧重软件，你需要实现 Hack 汇编器、编译器、标准库、操作系统，最后在这个平台上&lt;strong&gt;像个正常人类一样开发应用&lt;/strong&gt;。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>昭和遗珠：冈本舞子</title>
-      <link>https://diredocks.github.io/blog/posts/finding_maiko/</link>
-      <pubDate>Sun, 28 Jul 2024 23:58:34 +0800</pubDate>
-      <guid>https://diredocks.github.io/blog/posts/finding_maiko/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;今、 とっても JUICY AGE&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;我最近非常喜欢昭和时期的少女偶像艺人，中森明菜、松田圣子之类的。以及一个非常冷门的歌手：&lt;strong&gt;冈本舞子&lt;/strong&gt;。起因是听到一个非常棒的 Citypop &lt;a href=&#34;https://www.youtube.com/watch?v=igd-Icmc-xc&#34;&gt;歌单&lt;/a&gt;，一听钟情。&lt;/p&gt;&#xA;&lt;p&gt;非常可惜的是，她仅仅活动了三年左右就退役了，大约是在 1984 到 1987 年，期间发行了两张专辑：《ハートの扉》（心之门）和《ファッシネイション》（Fansination），都是在胜利唱片（Victor Entertainment）旗下。另外，她还演唱了《魔法の妖精ペルシャ》（魔法妖精贝露莎）的主题曲《見知らぬ国のトリッパー》。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>计划把 Quick Preview 带到 KDE</title>
-      <link>https://diredocks.github.io/blog/posts/kuick-1/</link>
-      <pubDate>Tue, 11 Jun 2024 22:39:00 +0800</pubDate>
-      <guid>https://diredocks.github.io/blog/posts/kuick-1/</guid>
-      <description>&lt;p&gt;macOS 上有一个很好用的功能，空格预览选中文件。&lt;/p&gt;&#xA;&lt;p&gt;Windows 上有很多功能类似的复刻，比如：&lt;a href=&#34;https://github.com/QL-Win/QuickLook&#34;&gt;QuickLook&lt;/a&gt;、&lt;a href=&#34;https://github.com/ccseer/Seer&#34;&gt;Seer&lt;/a&gt; 和 &lt;a href=&#34;https://github.com/shibayan/WinQuickLook&#34;&gt;WinQuickLook&lt;/a&gt;。Gnome 底下有 &lt;a href=&#34;https://gitlab.gnome.org/GNOME/sushi&#34;&gt;Sushi&lt;/a&gt;。我大 KDE 曾经也有类似的功能（&lt;a href=&#34;https://github.com/KDE/klook&#34;&gt;klook&lt;/a&gt;）可惜已经停更很久了。另外也有类似的复刻项目：&lt;a href=&#34;https://github.com/Nyre221/Kiview&#34;&gt;KiView&lt;/a&gt;，不过还很粗糙。&lt;/p&gt;&#xA;&lt;p&gt;暑假继续学 C++，然后把这个玩意儿做了，就起名 &lt;a href=&#34;https://github.com/diredocks/kuick&#34;&gt;Kuick&lt;/a&gt; 好了。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>请用密钥登陆 SSH</title>
-      <link>https://diredocks.github.io/blog/posts/no-password-please/</link>
-      <pubDate>Fri, 17 May 2024 14:31:09 +0800</pubDate>
-      <guid>https://diredocks.github.io/blog/posts/no-password-please/</guid>
-      <description>&lt;p&gt;无数人每天仍然在用 root 密码登陆他们的服务器，且不说允许 root 远程登陆是不是个好的习惯，至少咱能不用密码吗？&lt;/p&gt;&#xA;&lt;p&gt;在 Linux 下把你的密钥加入远程服务器很简单，使用命令：&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>搭建拥有安全证书的 Gost 隧道</title>
-      <link>https://diredocks.github.io/blog/posts/safe-gost-tunnel/</link>
-      <pubDate>Thu, 16 May 2024 22:23:04 +0800</pubDate>
-      <guid>https://diredocks.github.io/blog/posts/safe-gost-tunnel/</guid>
-      <description>&lt;p&gt;Gost 是 GO 语言实现的安全隧道，但是其默认 TLS 自签证书并不安全，参考这篇文章：&lt;a href=&#34;https://iamddch.com.cn/2020/05/23/WhyGostTlsNotSafe/&#34;&gt;为什么Gost TLS隧道的默认配置不安全&lt;/a&gt;，本篇博文记录如何正确搭建 Relay over wss 隧道，并将其转发到服务器上的 Cloudflare Warp 代理。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>寄</title>
-      <link>https://diredocks.github.io/blog/posts/fucked-up-life/</link>
-      <pubDate>Sun, 12 May 2024 19:56:43 +0800</pubDate>
-      <guid>https://diredocks.github.io/blog/posts/fucked-up-life/</guid>
-      <description>&lt;p&gt;早上给小陈送完听力资料，搭公交回学校已经是下午两点了。肚子这几天一直很疼，早上也没吃饭，疼得不想吃。想学一会 C++ 又实在集中不了注意力，遂躺回床上睡觉。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>逃避深刻</title>
-      <link>https://diredocks.github.io/blog/posts/escape-from-reality/</link>
-      <pubDate>Fri, 10 May 2024 23:54:58 +0800</pubDate>
-      <guid>https://diredocks.github.io/blog/posts/escape-from-reality/</guid>
-      <description>&lt;p&gt;最近河南说唱之神的《工厂》很火，别怀疑，这个歌手就叫做“河南说唱之神”。和之前万能青年旅店火的点差不多：歌好听、抨击社会现象，所谓的”走心“。看到更多年轻人开始关心这些东西，我很高兴，但又感觉身在其中事不由己，毕竟经济下行的年代才会有这么多人开始重拾”人文关怀“，经济好的时候大家都听 TFBoys 呢。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>在 Pixelbook Go 上安装 AOSC 的坑 feat.我的碎碎念</title>
-      <link>https://diredocks.github.io/blog/posts/pixelbook-go-with-aosc/</link>
-      <pubDate>Mon, 29 Apr 2024 00:24:03 +0800</pubDate>
-      <guid>https://diredocks.github.io/blog/posts/pixelbook-go-with-aosc/</guid>
-      <description>&lt;p&gt;这标题好长（）&lt;/p&gt;&#xA;&lt;h2 id=&#34;安装程序分区卡住&#34;&gt;安装程序分区卡住&lt;/h2&gt;&#xA;&lt;p&gt;目前安装程序 Deploykit 会在清除磁盘后报错，重启再进安装镜像方可解决这个问题。&lt;/p&gt;&#xA;&lt;h2 id=&#34;修复声音键盘映射&#34;&gt;修复声音/键盘映射&lt;/h2&gt;&#xA;&lt;p&gt;参考： &lt;a href=&#34;https://github.com/WeirdTreeThing/chromebook-linux-audio&#34;&gt;WeirdTreeThing/chromebook-linux-audio&lt;/a&gt; 和 &lt;a href=&#34;https://github.com/WeirdTreeThing/cros-keyboard-map&#34;&gt;WeirdTreeThing/cros-keyboard-map&lt;/a&gt;&#xA;AOSC OS 的兼容性还是不错的，跑的脚本没有经过更改，直接依照指导运行就能生效。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>试着写一个更好的校园网认证客户端</title>
-      <link>https://diredocks.github.io/blog/posts/attempting-implement-better-campus-net-client/</link>
-      <pubDate>Sun, 21 Apr 2024 00:02:42 +0800</pubDate>
-      <guid>https://diredocks.github.io/blog/posts/attempting-implement-better-campus-net-client/</guid>
-      <description>&lt;p&gt;我一直在用 bitdust 的 &lt;a href=&#34;https://github.com/bitdust/njit8021xclient&#34;&gt;njit8021xclient&lt;/a&gt;，除了一开始的反编译过程令我痛苦无比，后面的使用非常非常顺畅，基本上没出过什么大岔子。校园网的计费系统和行为管理系统是分开的，所以上学期几次被封也不是认证的锅。&lt;/p&gt;&#xA;&lt;p&gt;这个开源的新华三 802.1X 客户端经历了十几年松散的开发，从代码上来看比较丑陋，不过用着没问题，我也就没想着折腾它。而希望能重写一个更好的客户端的念头来源于我最近的 C++ 学习，光看教程十分枯燥，我想着多少写点有用的东西。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Another Boring Hello World Post</title>
-      <link>https://diredocks.github.io/blog/posts/hello-world/</link>
-      <pubDate>Tue, 16 Apr 2024 13:05:13 +0800</pubDate>
-      <guid>https://diredocks.github.io/blog/posts/hello-world/</guid>
-      <description>&lt;p&gt;很多事情该说不说，最后烂在肚子里就不想说了，说实话，这么些年下来&#xA;我的表达欲慢慢在降低。我说或者不说又有什么用呢？说得太多，&#xA;反而容易被识破、戳穿。&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>文章 on 池塘</title><link>https://diredocks.github.io/blog/posts/</link><description>Recent content in 文章 on 池塘</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Sat, 01 Feb 2025 19:38:42 +0800</lastBuildDate><atom:link href="https://diredocks.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>我是怎么在静态博客里插图的？</title><link>https://diredocks.github.io/blog/posts/images-in-hugo/</link><pubDate>Sat, 01 Feb 2025 19:38:42 +0800</pubDate><guid>https://diredocks.github.io/blog/posts/images-in-hugo/</guid><description>&lt;p>在静态博客里插图一直是个问题，常用的解决方案是第三方/自建图床，但是这些解决方案有以下缺点：&lt;/p>
+&lt;ul>
+&lt;li>不知道这个第三方能用爱发电到什么时候，万一突然倒闭了数据很难找回来&lt;/li>
+&lt;li>某些白嫖图床（比方说大眼）有可能突然把外链砍了，到时候整个博客一片“此图片禁止外部引用”&lt;/li>
+&lt;li>自建可能会被某些杂种刷流量刷爆 CDN 或者 OSS 账单，就算设了配额也麻烦&lt;/li>
+&lt;li>也有可能某天域名忘记续费了，外链全部挂掉，等到回头记得续费的时候已经变成天价了&lt;/li>
+&lt;/ul>
+&lt;p>因为这些破事，我就一直不敢往文章里插图，不过最近闲着没事，便开始着手解决这个问题。&lt;/p></description></item><item><title>我去 2012 年</title><link>https://diredocks.github.io/blog/posts/back-to-2012/</link><pubDate>Fri, 31 Jan 2025 15:59:34 +0800</pubDate><guid>https://diredocks.github.io/blog/posts/back-to-2012/</guid><description>&lt;p>2012 年已经是 13 年之前了，生肖都过了一轮不止。我其实很欣赏当时的网站设计，好像 Web 在那时发展到了一个顶点，人们正在从世界末日的谣言中缓过劲来，在 Flash 和 HTML 5 的间隙中悬浮。&lt;/p></description></item><item><title>为 Armbian 配置只读 rootfs</title><link>https://diredocks.github.io/blog/posts/overlayfs-on-armbian/</link><pubDate>Tue, 14 Jan 2025 13:12:53 +0800</pubDate><guid>https://diredocks.github.io/blog/posts/overlayfs-on-armbian/</guid><description>&lt;p>本文是 &lt;a href="https://forum.armbian.com/topic/19870-how-to-use-with-write-protected-filesystems-todays/">How to use with write protected filesystems todays? - forum.armbian.com&lt;/a> 的翻译。&lt;/p>
+&lt;p>Armbian 是为单板计算机和嵌入式设备优化的 Linux 发行版，我最近在家里放了一块 tpm312, 作为 VPN 网关，方便我在外访问家里的网络。&lt;/p>
+&lt;p>这块板子不支持从 SD 卡和 U 盘启动，为了尽可能减小读写对 emmc 的损耗，我选择将 rootfs 配置成只读。&lt;/p></description></item><item><title>常识备忘</title><link>https://diredocks.github.io/blog/posts/you-need-to-know/</link><pubDate>Sat, 11 Jan 2025 13:35:59 +0800</pubDate><guid>https://diredocks.github.io/blog/posts/you-need-to-know/</guid><description>&lt;blockquote>
+&lt;p>生活小窍门&lt;/p>
+&lt;/blockquote>
+&lt;p>这是我目前为止需要提醒自己注意的生活常识，可能不适用于所有人，仅仅作为备忘提醒自己。&lt;/p>
+&lt;h2 id="起居">起居&lt;/h2>
+&lt;ol>
+&lt;li>东西坏了就丢掉，一次性的东西就是一次性的，别攒着，否则结果就是垃圾堆积成山。&lt;/li>
+&lt;li>定期更换牙刷、毛巾和水杯，防止细菌滋生。不舒服两天之你不好就去看医生吃药，别自己忍着。&lt;/li>
+&lt;li>想去学什么就去学，饿了就吃。&lt;/li>
+&lt;/ol>
+&lt;h2 id="社交">社交&lt;/h2>
+&lt;ol>
+&lt;li>远离能引发强烈情绪的人和群体，少回忆以前，包括让人嫉妒和仇恨的。&lt;/li>
+&lt;li>不要被老一辈的观念束缚，自己思考和选择合适自己的交友范围和社交方式。内向也没什么不好的，不要试图获得所有人的理解，也不要以己度人。&lt;/li>
+&lt;li>对长辈诚实些，（和他们沟通的时候）多站在他们的角度思考问题，才能更好理解他们的想法。&lt;/li>
+&lt;/ol>
+&lt;h2 id="技术">技术&lt;/h2>
+&lt;ol>
+&lt;li>刷论坛不能让你得到知识，如果你只会被动接受信息而不会向外输出自己的想法，那么社交媒体或许不是个好地方。&lt;/li>
+&lt;li>读书和手册就是枯燥的， 但遗憾的是这或许是必要的，否则一写项目你甚至不知道自己“不知道什么”。&lt;/li>
+&lt;li>技术的增长需要积累，多写代码多实现点子，就算烂尾也没关系：你永远不可能比那之后更不了解你研究的东西了。&lt;/li>
+&lt;/ol>
+&lt;h2 id="结语">结语&lt;/h2>
+&lt;p>爱自己才会有人爱你。&lt;/p></description></item><item><title>2024</title><link>https://diredocks.github.io/blog/posts/2024/</link><pubDate>Tue, 07 Jan 2025 23:40:09 +0800</pubDate><guid>https://diredocks.github.io/blog/posts/2024/</guid><description>&lt;blockquote>
+&lt;p>这一年我都干啥了？&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="一月">一月&lt;/h2>
+&lt;p>大一下结束了，寒假，学了一点 Haskell, 后来没怎么用就忘了，见朋友。&lt;/p>
+&lt;h2 id="三月">三月&lt;/h2>
+&lt;p>认识一个很有意思的学长，俩人线下面基吃饭了，聊得还不错。有点想快点毕业工作挣钱。聊完了感觉那时候学校氛围特别好，现在多少有点冷清了，系里也没什么和计算机相关的活动。&lt;/p></description></item><item><title>计算机网络复习</title><link>https://diredocks.github.io/blog/posts/review-computer-networking/</link><pubDate>Mon, 16 Dec 2024 21:06:23 +0800</pubDate><guid>https://diredocks.github.io/blog/posts/review-computer-networking/</guid><description>&lt;h2 id="题目类型">题目类型&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>类型&lt;/th>
+ &lt;th>分数&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>单选&lt;/td>
+ &lt;td>15&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>填空&lt;/td>
+ &lt;td>15&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>判断&lt;/td>
+ &lt;td>15&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>改错&lt;/td>
+ &lt;td>15&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>简答&lt;/td>
+ &lt;td>15&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>计算&lt;/td>
+ &lt;td>30&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="体系架构p31-图1-16">体系架构（P31 图1-16）&lt;/h2>
+&lt;h3 id="osi-7层协议">OSI 7层协议&lt;/h3>
+&lt;ol>
+&lt;li>应用层&lt;/li>
+&lt;li>表示层&lt;/li>
+&lt;li>会话层&lt;/li>
+&lt;li>运输层&lt;/li>
+&lt;li>网络层&lt;/li>
+&lt;li>数据链路层&lt;/li>
+&lt;li>物理层&lt;/li>
+&lt;/ol>
+&lt;h3 id="tcpip-4层协议">TCP/IP 4层协议&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>层次&lt;/th>
+ &lt;th>功能与示例协议&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>应用层&lt;/td>
+ &lt;td>HTTP, SMTP, DNS&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>运输层&lt;/td>
+ &lt;td>TCP, UDP&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>网际层&lt;/td>
+ &lt;td>IP&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>链路层&lt;/td>
+ &lt;td>数据链路和物理层合并&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="教材-5层协议">教材 5层协议&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>层次&lt;/th>
+ &lt;th>功能&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>应用层&lt;/td>
+ &lt;td>提供特定网络服务&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>运输层&lt;/td>
+ &lt;td>通用进程通信&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>网络层&lt;/td>
+ &lt;td>IP数据报、路由器&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>数据链路层&lt;/td>
+ &lt;td>帧传输、差错检测、纠错&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>物理层&lt;/td>
+ &lt;td>比特传输、电气特性&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="扩展以太网">扩展以太网&lt;/h2>
+&lt;h3 id="物理层集线器p100">物理层：集线器（P100）&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>&lt;strong>优点&lt;/strong>&lt;/th>
+ &lt;th>&lt;strong>缺点&lt;/strong>&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>扩大以太网覆盖范围&lt;/td>
+ &lt;td>碰撞域变大，通信易受碰撞影响&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>实现跨系通信&lt;/td>
+ &lt;td>最大速率受限于最慢连接的设备&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="数据链路层交换机网桥p101">数据链路层：交换机（网桥）（P101）&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>&lt;strong>优点&lt;/strong>&lt;/th>
+ &lt;th>&lt;strong>缺点&lt;/strong>&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>扩大物理范围、提高可靠性&lt;/td>
+ &lt;td>存储转发增加了时延&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>可互连不同物理层、不同 MAC 子层和不同速率（如 10 Mb/s 和 100 Mb/s 以太网）的局域网&lt;/td>
+ &lt;td>网桥只适合于用户数不太多 (不超过几百个) 和通信量不太大的局域网，否则有时还会因传播过多的广播信息而产生网络拥塞，即广播风暴&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="常见拓扑的优缺点">常见拓扑的优缺点&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>&lt;strong>拓扑&lt;/strong>&lt;/th>
+ &lt;th>&lt;strong>优点&lt;/strong>&lt;/th>
+ &lt;th>&lt;strong>缺点&lt;/strong>&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>星形拓扑&lt;/td>
+ &lt;td>结构简单，便于控制与扩展；故障诊断易；各节点独立&lt;/td>
+ &lt;td>中央节点负担重，易成瓶颈；电缆需求多，安装复杂&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>总线型拓扑&lt;/td>
+ &lt;td>结构简单，电缆需求少&lt;/td>
+ &lt;td>传输距离有限；故障诊断困难；分布式协议难以保证实时传送&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>环形拓扑&lt;/td>
+ &lt;td>电缆长度短，易扩展；可用光纤&lt;/td>
+ &lt;td>单点故障导致全网失效；故障检查难；负载轻时信道利用率低&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>树形拓扑&lt;/td>
+ &lt;td>易于扩展；故障隔离较容易&lt;/td>
+ &lt;td>根节点依赖性大&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="虚电路服务-vs-数据报服务">虚电路服务 vs 数据报服务&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>&lt;strong>特性&lt;/strong>&lt;/th>
+ &lt;th>&lt;strong>虚电路服务&lt;/strong>&lt;/th>
+ &lt;th>&lt;strong>数据报服务&lt;/strong>&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>可靠性&lt;/td>
+ &lt;td>网络保证&lt;/td>
+ &lt;td>用户主机保证&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>是否建立连接&lt;/td>
+ &lt;td>是&lt;/td>
+ &lt;td>否&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>地址使用&lt;/td>
+ &lt;td>连接建立时使用终点地址&lt;/td>
+ &lt;td>每个分组都需携带完整终点地址&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>路由&lt;/td>
+ &lt;td>同一条虚电路的分组按同一路由转发&lt;/td>
+ &lt;td>每个分组独立查表转发&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>故障处理&lt;/td>
+ &lt;td>故障节点影响所有虚电路&lt;/td>
+ &lt;td>路由变化，部分包可能丢失&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>顺序&lt;/td>
+ &lt;td>按顺序接收&lt;/td>
+ &lt;td>不一定按顺序接收&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="rip工作的特点">RIP工作的特点&lt;/h2>
+&lt;ul>
+&lt;li>仅与相邻路由器交换信息&lt;/li>
+&lt;li>交换本路由器的路由表&lt;/li>
+&lt;li>按固定时间间隔进行交换&lt;/li>
+&lt;/ul>
+&lt;h2 id="传输层两大协议的特点">传输层两大协议的特点&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>&lt;strong>特性&lt;/strong>&lt;/th>
+ &lt;th>&lt;strong>TCP&lt;/strong>&lt;/th>
+ &lt;th>&lt;strong>UDP&lt;/strong>&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>连接&lt;/td>
+ &lt;td>是&lt;/td>
+ &lt;td>否&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>通信方式&lt;/td>
+ &lt;td>点对点&lt;/td>
+ &lt;td>支持多对多、一对多、一对一&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>可靠性&lt;/td>
+ &lt;td>可靠交付&lt;/td>
+ &lt;td>尽最大可能交付&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>传输单位&lt;/td>
+ &lt;td>面向字节流&lt;/td>
+ &lt;td>面向报文&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>拥塞控制&lt;/td>
+ &lt;td>有&lt;/td>
+ &lt;td>无&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>首部开销&lt;/td>
+ &lt;td>较大&lt;/td>
+ &lt;td>较小&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="大题">大题&lt;/h2>
+&lt;h3 id="编码方式">编码方式&lt;/h3>
+&lt;p>课本 P45&lt;/p></description></item><item><title>给 Nixpkgs 里的软件打上你自己的补丁</title><link>https://diredocks.github.io/blog/posts/patch-nixpkg-overlay/</link><pubDate>Tue, 26 Nov 2024 21:25:12 +0800</pubDate><guid>https://diredocks.github.io/blog/posts/patch-nixpkg-overlay/</guid><description>&lt;p>我最近给 KWin 加上了触控板三指水平滑动切换窗口的功能，很不幸由于和目前的手势分配有冲突，合并请求被搁置了。但是咱都有源码了，还能干等着不成？&lt;/p>
+&lt;p>在 ArchLinux 里，给已有的包打上自己的补丁，只需要抄一下官方仓库里的 PKGBUILD，加上补丁，然后自己构建安装即可。在 NixOS 里也是差不多的，用 overlay 覆盖 nixpkgs 里的包，好处是将来的更新无需手动同步版本，因为只是覆盖原有包的某些构建阶段，一劳永逸。&lt;/p></description></item><item><title>Choose Life</title><link>https://diredocks.github.io/blog/posts/choose-life/</link><pubDate>Sat, 05 Oct 2024 23:09:36 +0800</pubDate><guid>https://diredocks.github.io/blog/posts/choose-life/</guid><description>&lt;p>We can’t really do much in this day and age, not for regular people—those with just average looks, intelligence, or money. Back when I was in junior high, my biology teacher said birds are constantly on the hunt for food, day and night, without rest. Aren’t we a lot like those little creatures?&lt;/p>
+&lt;p>Building a hobby requires time, money, and attention—resources most of us don’t have in abundance. Losing touch with hobbies shuts down many opportunities for us. We miss out on connecting with a broader social circle, gaining real-life experiences, and truly enjoying life. It paints a pretty pessimistic picture.&lt;/p></description></item><item><title>Time to Go</title><link>https://diredocks.github.io/blog/posts/time-to-go/</link><pubDate>Sat, 28 Sep 2024 18:29:04 +0800</pubDate><guid>https://diredocks.github.io/blog/posts/time-to-go/</guid><description>&lt;p>I often find myself reflecting on moments from the past. I know there&amp;rsquo;s always a voice in my head saying, &amp;lsquo;Understanding your past is essential for reaching the future.&amp;rsquo; But let’s be honest: every time I revisit my unfinished projects or failures, all I feel is regret—nothing more.&lt;/p>
+&lt;p>To open your mind means to filter out the noise around you, including echoes from the past. We need to focus on what lies ahead and recognize that we can&amp;rsquo;t change history.&lt;/p></description></item><item><title>Worn Out</title><link>https://diredocks.github.io/blog/posts/worn-out/</link><pubDate>Sat, 28 Sep 2024 18:08:07 +0800</pubDate><guid>https://diredocks.github.io/blog/posts/worn-out/</guid><description>&lt;p>Dealing with clueless people is one of the hardest things in life.&lt;/p>
+&lt;p>I actually appreciate the ones who are genuinely clueless but honest about it. At least they&amp;rsquo;re straightforward. But then there are those who pretend to know something, only to manipulate and take advantage of you, like you&amp;rsquo;re disposable.&lt;/p>
+&lt;p>It&amp;rsquo;s disappointing, frustrating, and downright disgusting.&lt;/p>
+&lt;p>I can&amp;rsquo;t stand these people, and I&amp;rsquo;ve decided to do everything I can to distance myself from them.&lt;/p></description></item><item><title>至专校园网攻略</title><link>https://diredocks.github.io/blog/posts/zhicheng-campus-network-guide/</link><pubDate>Tue, 10 Sep 2024 20:32:06 +0800</pubDate><guid>https://diredocks.github.io/blog/posts/zhicheng-campus-network-guide/</guid><description>&lt;p>&lt;strong>日后你惹出祸来，不把师父说出来就行了&lt;/strong>&lt;/p>
+&lt;h2 id="校园网概况">校园网概况&lt;/h2>
+&lt;ol>
+&lt;li>名义上有三家运营商，但实际出口只有联通和移动两家，2024 年秋季开学以来，电信好像消失了；&lt;/li>
+&lt;li>所以无论你办哪家的校园网，校园网（有线网络、校园热点）的网络质量都是一样的；&lt;/li>
+&lt;li>没有 ipv6；&lt;/li>
+&lt;li>教务处的服务不需要内网，你不买校园网也可以正常选课。&lt;/li>
+&lt;/ol>
+&lt;h2 id="认证客户端inyn">认证客户端：inyn&lt;/h2>
+&lt;blockquote>
+&lt;p>自由不是你想做什么就能做什么，而是你不想做什么就可以不做什么 —— 伊曼努尔·康德&lt;/p></description></item><item><title>Nand2UnitTest：从与非门到单元测试</title><link>https://diredocks.github.io/blog/posts/nand2unittest/</link><pubDate>Tue, 06 Aug 2024 23:38:20 +0800</pubDate><guid>https://diredocks.github.io/blog/posts/nand2unittest/</guid><description>&lt;p>我最近在做一个叫做 &lt;a href="https://www.nand2tetris.org/">Nand2Tetris&lt;/a> 的课程，主要是关于计算机组成原理的，从与非们出发，最好搭建出一部完整的计算机系统。&lt;/p>
+&lt;p>这门课分为两个部分，第一部分侧重硬件，从与非门开始，搭建完整的计算机平台（这门课搭建的平台叫 Hack）；第二部分侧重软件，你需要实现 Hack 汇编器、编译器、标准库、操作系统，最后在这个平台上&lt;strong>像个正常人类一样开发应用&lt;/strong>。&lt;/p></description></item><item><title>昭和遗珠：冈本舞子</title><link>https://diredocks.github.io/blog/posts/finding_maiko/</link><pubDate>Sun, 28 Jul 2024 23:58:34 +0800</pubDate><guid>https://diredocks.github.io/blog/posts/finding_maiko/</guid><description>&lt;blockquote>
+&lt;p>今、 とっても JUICY AGE&lt;/p>
+&lt;/blockquote>
+&lt;p>我最近非常喜欢昭和时期的少女偶像艺人，中森明菜、松田圣子之类的。以及一个非常冷门的歌手：&lt;strong>冈本舞子&lt;/strong>。起因是听到一个非常棒的 Citypop &lt;a href="https://www.youtube.com/watch?v=igd-Icmc-xc">歌单&lt;/a>，一听钟情。&lt;/p>
+&lt;p>非常可惜的是，她仅仅活动了三年左右就退役了，大约是在 1984 到 1987 年，期间发行了两张专辑：《ハートの扉》（心之门）和《ファッシネイション》（Fansination），都是在胜利唱片（Victor Entertainment）旗下。另外，她还演唱了《魔法の妖精ペルシャ》（魔法妖精贝露莎）的主题曲《見知らぬ国のトリッパー》。&lt;/p></description></item><item><title>计划把 Quick Preview 带到 KDE</title><link>https://diredocks.github.io/blog/posts/kuick-1/</link><pubDate>Tue, 11 Jun 2024 22:39:00 +0800</pubDate><guid>https://diredocks.github.io/blog/posts/kuick-1/</guid><description>&lt;p>macOS 上有一个很好用的功能，空格预览选中文件。&lt;/p>
+&lt;p>Windows 上有很多功能类似的复刻，比如：&lt;a href="https://github.com/QL-Win/QuickLook">QuickLook&lt;/a>、&lt;a href="https://github.com/ccseer/Seer">Seer&lt;/a> 和 &lt;a href="https://github.com/shibayan/WinQuickLook">WinQuickLook&lt;/a>。Gnome 底下有 &lt;a href="https://gitlab.gnome.org/GNOME/sushi">Sushi&lt;/a>。我大 KDE 曾经也有类似的功能（&lt;a href="https://github.com/KDE/klook">klook&lt;/a>）可惜已经停更很久了。另外也有类似的复刻项目：&lt;a href="https://github.com/Nyre221/Kiview">KiView&lt;/a>，不过还很粗糙。&lt;/p>
+&lt;p>暑假继续学 C++，然后把这个玩意儿做了，就起名 &lt;a href="https://github.com/diredocks/kuick">Kuick&lt;/a> 好了。&lt;/p></description></item><item><title>请用密钥登陆 SSH</title><link>https://diredocks.github.io/blog/posts/no-password-please/</link><pubDate>Fri, 17 May 2024 14:31:09 +0800</pubDate><guid>https://diredocks.github.io/blog/posts/no-password-please/</guid><description>&lt;p>无数人每天仍然在用 root 密码登陆他们的服务器，且不说允许 root 远程登陆是不是个好的习惯，至少咱能不用密码吗？&lt;/p>
+&lt;p>在 Linux 下把你的密钥加入远程服务器很简单，使用命令：&lt;/p></description></item><item><title>搭建拥有安全证书的 Gost 隧道</title><link>https://diredocks.github.io/blog/posts/safe-gost-tunnel/</link><pubDate>Thu, 16 May 2024 22:23:04 +0800</pubDate><guid>https://diredocks.github.io/blog/posts/safe-gost-tunnel/</guid><description>&lt;p>Gost 是 GO 语言实现的安全隧道，但是其默认 TLS 自签证书并不安全，参考这篇文章：&lt;a href="https://iamddch.com.cn/2020/05/23/WhyGostTlsNotSafe/">为什么Gost TLS隧道的默认配置不安全&lt;/a>，本篇博文记录如何正确搭建 Relay over wss 隧道，并将其转发到服务器上的 Cloudflare Warp 代理。&lt;/p></description></item><item><title>寄</title><link>https://diredocks.github.io/blog/posts/fucked-up-life/</link><pubDate>Sun, 12 May 2024 19:56:43 +0800</pubDate><guid>https://diredocks.github.io/blog/posts/fucked-up-life/</guid><description>&lt;p>早上给小陈送完听力资料，搭公交回学校已经是下午两点了。肚子这几天一直很疼，早上也没吃饭，疼得不想吃。想学一会 C++ 又实在集中不了注意力，遂躺回床上睡觉。&lt;/p></description></item><item><title>逃避深刻</title><link>https://diredocks.github.io/blog/posts/escape-from-reality/</link><pubDate>Fri, 10 May 2024 23:54:58 +0800</pubDate><guid>https://diredocks.github.io/blog/posts/escape-from-reality/</guid><description>&lt;p>最近河南说唱之神的《工厂》很火，别怀疑，这个歌手就叫做“河南说唱之神”。和之前万能青年旅店火的点差不多：歌好听、抨击社会现象，所谓的”走心“。看到更多年轻人开始关心这些东西，我很高兴，但又感觉身在其中事不由己，毕竟经济下行的年代才会有这么多人开始重拾”人文关怀“，经济好的时候大家都听 TFBoys 呢。&lt;/p></description></item><item><title>在 Pixelbook Go 上安装 AOSC 的坑 feat.我的碎碎念</title><link>https://diredocks.github.io/blog/posts/pixelbook-go-with-aosc/</link><pubDate>Mon, 29 Apr 2024 00:24:03 +0800</pubDate><guid>https://diredocks.github.io/blog/posts/pixelbook-go-with-aosc/</guid><description>&lt;p>这标题好长（）&lt;/p>
+&lt;h2 id="安装程序分区卡住">安装程序分区卡住&lt;/h2>
+&lt;p>目前安装程序 Deploykit 会在清除磁盘后报错，重启再进安装镜像方可解决这个问题。&lt;/p>
+&lt;h2 id="修复声音键盘映射">修复声音/键盘映射&lt;/h2>
+&lt;p>参考： &lt;a href="https://github.com/WeirdTreeThing/chromebook-linux-audio">WeirdTreeThing/chromebook-linux-audio&lt;/a> 和 &lt;a href="https://github.com/WeirdTreeThing/cros-keyboard-map">WeirdTreeThing/cros-keyboard-map&lt;/a>
+AOSC OS 的兼容性还是不错的，跑的脚本没有经过更改，直接依照指导运行就能生效。&lt;/p></description></item><item><title>试着写一个更好的校园网认证客户端</title><link>https://diredocks.github.io/blog/posts/attempting-implement-better-campus-net-client/</link><pubDate>Sun, 21 Apr 2024 00:02:42 +0800</pubDate><guid>https://diredocks.github.io/blog/posts/attempting-implement-better-campus-net-client/</guid><description>&lt;p>我一直在用 bitdust 的 &lt;a href="https://github.com/bitdust/njit8021xclient">njit8021xclient&lt;/a>，除了一开始的反编译过程令我痛苦无比，后面的使用非常非常顺畅，基本上没出过什么大岔子。校园网的计费系统和行为管理系统是分开的，所以上学期几次被封也不是认证的锅。&lt;/p>
+&lt;p>这个开源的新华三 802.1X 客户端经历了十几年松散的开发，从代码上来看比较丑陋，不过用着没问题，我也就没想着折腾它。而希望能重写一个更好的客户端的念头来源于我最近的 C++ 学习，光看教程十分枯燥，我想着多少写点有用的东西。&lt;/p></description></item><item><title>Another Boring Hello World Post</title><link>https://diredocks.github.io/blog/posts/hello-world/</link><pubDate>Tue, 16 Apr 2024 13:05:13 +0800</pubDate><guid>https://diredocks.github.io/blog/posts/hello-world/</guid><description>&lt;p>很多事情该说不说，最后烂在肚子里就不想说了，说实话，这么些年下来
+我的表达欲慢慢在降低。我说或者不说又有什么用呢？说得太多，
+反而容易被识破、戳穿。&lt;/p></description></item></channel></rss>
