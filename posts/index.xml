@@ -6,8 +6,15 @@
     <description>Recent content in 文章 on 池塘</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 31 Jan 2025 15:59:34 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 01 Feb 2025 19:38:42 +0800</lastBuildDate>
     <atom:link href="https://diredocks.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>我是怎么在静态博客里插图的？</title>
+      <link>https://diredocks.github.io/blog/posts/images-in-hugo/</link>
+      <pubDate>Sat, 01 Feb 2025 19:38:42 +0800</pubDate>
+      <guid>https://diredocks.github.io/blog/posts/images-in-hugo/</guid>
+      <description>&lt;p&gt;在静态博客里插图一直是个问题，常用的解决方案是第三方/自建图床，但是这些解决方案有以下缺点：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;不知道这个第三方能用爱发电到什么时候，万一突然倒闭了数据很难找回来&lt;/li&gt;&#xA;&lt;li&gt;某些白嫖图床（比方说大眼）有可能突然把外链砍了，到时候整个博客一片“此图片禁止外部引用”&lt;/li&gt;&#xA;&lt;li&gt;自建可能会被某些杂种刷流量刷爆 CDN 或者 OSS 账单，就算设了配额也麻烦&lt;/li&gt;&#xA;&lt;li&gt;也有可能某天域名忘记续费了，外链全部挂掉，等到回头记得续费的时候已经变成天价了&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;因为这些破事，我就一直不敢往文章里插图，不过最近闲着没事，便开始着手解决这个问题。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>我去 2012 年</title>
       <link>https://diredocks.github.io/blog/posts/back-to-2012/</link>

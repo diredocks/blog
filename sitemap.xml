@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://diredocks.github.io/blog/posts/images-in-hugo/</loc>
+    <lastmod>2025-02-01T19:38:42+08:00</lastmod>
+  </url><url>
     <loc>https://diredocks.github.io/blog/posts/back-to-2012/</loc>
     <lastmod>2025-01-31T15:59:34+08:00</lastmod>
   </url><url>
@@ -62,14 +65,11 @@
     <loc>https://diredocks.github.io/blog/posts/hello-world/</loc>
     <lastmod>2024-04-16T13:05:13+08:00</lastmod>
   </url><url>
-    <loc>https://diredocks.github.io/blog/about/</loc>
-    <lastmod>2024-01-01T08:00:00-07:00</lastmod>
-  </url><url>
-    <loc>https://diredocks.github.io/blog/posts/</loc>
-    <lastmod>2023-01-01T08:30:00-07:00</lastmod>
-  </url><url>
     <loc>https://diredocks.github.io/blog/</loc>
     <lastmod>2023-01-01T08:00:00-07:00</lastmod>
+  </url><url>
+    <loc>https://diredocks.github.io/blog/posts/</loc>
+    <lastmod>2023-01-01T08:30:00+09:00</lastmod>
   </url><url>
     <loc>https://diredocks.github.io/blog/categories/</loc>
   </url><url>
